@@ -18,7 +18,6 @@
   <body>
     <div class="grain" aria-hidden="true"></div>
 
-    <!-- ─── HEADER ─── -->
     <header class="header">
       <div class="container header-inner">
         <a class="logo" href="#top" aria-label="Adam — Home">
@@ -43,7 +42,7 @@
       <!-- ─── HERO ─── -->
       <section id="top" class="hero">
         <div class="container hero-inner">
-          <div class="hero-content reveal">
+          <div class="hero-content anim" data-anim="slide-left">
             <p class="hero-eyebrow"><span class="dot"></span> Cairo, Egypt · 15 · Builder</p>
             <h1>I build things<br />to <em>understand</em> them.</h1>
             <p class="hero-sub">Software systems, data pipelines, AI prototypes, games, and design — all made by a curious student who learns by shipping.</p>
@@ -57,7 +56,7 @@
               <div><dt>Technologies</dt><dd>20+</dd></div>
             </dl>
           </div>
-          <div class="hero-visual reveal" aria-hidden="true">
+          <div class="hero-visual anim" data-anim="zoom-blur" aria-hidden="true">
             <div class="hv-ring hv-ring-1"></div>
             <div class="hv-ring hv-ring-2"></div>
             <div class="hv-core"><span>&lt;/&gt;</span></div>
@@ -72,30 +71,30 @@
       <!-- ─── ABOUT ─── -->
       <section id="about" class="about">
         <div class="container">
-          <div class="section-tag reveal"><span class="tag-num">01</span> About</div>
+          <div class="section-tag anim" data-anim="blur-up"><span class="tag-num">01</span> About</div>
           <div class="about-grid">
-            <div class="about-text reveal">
+            <div class="about-text anim" data-anim="slide-left">
               <h2>A builder first.<br />A learner by default.</h2>
               <p>I'm Adam — I explore the space between code, data, AI, and design by making real things. From a browser-based OS to an ISEF science project, every project teaches me something new.</p>
               <p>My strongest areas: Python & SQL for data analysis, full-stack web development (React, TypeScript, Node), and the hardware-software intersection in AI/IoT.</p>
             </div>
-            <div class="capabilities reveal">
-              <article class="cap-card" style="--cap-accent: var(--blue)">
+            <div class="capabilities">
+              <article class="cap-card anim" data-anim="flip-up" style="--cap-accent: var(--blue); --i:0">
                 <span class="cap-num">01</span>
                 <h3>Software Systems</h3>
                 <p>Browser-based tools, full-stack web apps, and prototypes with thoughtful architecture.</p>
               </article>
-              <article class="cap-card" style="--cap-accent: var(--green)">
+              <article class="cap-card anim" data-anim="flip-up" style="--cap-accent: var(--green); --i:1">
                 <span class="cap-num">02</span>
                 <h3>Data Analysis</h3>
                 <p>Cleaning, exploring, and visualizing structured datasets with Python, Pandas, and SQL.</p>
               </article>
-              <article class="cap-card" style="--cap-accent: var(--purple)">
+              <article class="cap-card anim" data-anim="flip-up" style="--cap-accent: var(--purple); --i:2">
                 <span class="cap-num">03</span>
                 <h3>AI & Robotics</h3>
                 <p>Sensor data, anomaly detection, hardware integration, and machine learning prototypes.</p>
               </article>
-              <article class="cap-card" style="--cap-accent: var(--orange)">
+              <article class="cap-card anim" data-anim="flip-up" style="--cap-accent: var(--orange); --i:3">
                 <span class="cap-num">04</span>
                 <h3>Creative & Design</h3>
                 <p>Game development, graphic design, branding, and interactive visual experiences.</p>
@@ -108,11 +107,11 @@
       <!-- ─── PROJECTS ─── -->
       <section id="projects" class="projects">
         <div class="container">
-          <div class="section-tag reveal"><span class="tag-num">02</span> Projects</div>
-          <h2 class="reveal">Everything I've built.</h2>
-          <p class="section-desc reveal">13 projects across software, data, AI, and creative work. Each one taught me something different.</p>
+          <div class="section-tag anim" data-anim="blur-up"><span class="tag-num">02</span> Projects</div>
+          <h2 class="anim" data-anim="slide-left">Everything I've built.</h2>
+          <p class="section-desc anim" data-anim="blur-up">13 projects across software, data, AI, and creative work. Each one taught me something different.</p>
 
-          <div class="filter-bar reveal" role="toolbar" aria-label="Filter projects">
+          <div class="filter-bar anim" data-anim="flip-up" role="toolbar" aria-label="Filter projects">
             <button class="filter-btn is-active" data-filter="all" type="button">All <span>13</span></button>
             <button class="filter-btn" data-filter="apps" type="button">Software <span>4</span></button>
             <button class="filter-btn" data-filter="data" type="button">Data <span>6</span></button>
@@ -123,7 +122,7 @@
           <div class="project-grid">
 
             <!-- 1. AdamOS -->
-            <article class="card card-featured reveal" data-category="apps">
+            <article class="card anim" data-anim="slide-left" style="--i:0" data-category="apps">
               <div class="card-accent" style="--accent: var(--blue)"></div>
               <div class="card-body">
                 <div class="card-header">
@@ -141,7 +140,7 @@
             </article>
 
             <!-- 2. Gharbawy -->
-            <article class="card card-featured reveal" data-category="apps">
+            <article class="card anim" data-anim="slide-right" style="--i:1" data-category="apps">
               <div class="card-accent" style="--accent: var(--blue)"></div>
               <div class="card-body">
                 <div class="card-header">
@@ -156,7 +155,7 @@
             </article>
 
             <!-- 3. MedShield -->
-            <article class="card card-featured reveal" data-category="ai">
+            <article class="card anim" data-anim="zoom-blur" style="--i:2" data-category="ai">
               <div class="card-accent" style="--accent: var(--purple)"></div>
               <div class="card-body">
                 <div class="card-header">
@@ -171,7 +170,7 @@
             </article>
 
             <!-- 4. Maryam Journal -->
-            <article class="card reveal" data-category="apps">
+            <article class="card anim" data-anim="flip-up" style="--i:0" data-category="apps">
               <div class="card-accent" style="--accent: var(--blue)"></div>
               <div class="card-body">
                 <div class="card-header">
@@ -185,8 +184,8 @@
               </div>
             </article>
 
-            <!-- 5. Graphic Design Portfolio ★ NEW -->
-            <article class="card reveal" data-category="creative">
+            <!-- 5. Graphic Design Portfolio -->
+            <article class="card anim" data-anim="slide-left" style="--i:1" data-category="creative">
               <div class="card-accent" style="--accent: var(--orange)"></div>
               <div class="card-body">
                 <div class="card-header">
@@ -206,7 +205,7 @@
             </article>
 
             <!-- 6. Food Delivery Analysis -->
-            <article class="card reveal" data-category="data">
+            <article class="card anim" data-anim="slide-right" style="--i:2" data-category="data">
               <div class="card-accent" style="--accent: var(--green)"></div>
               <div class="card-body">
                 <div class="card-header">
@@ -221,7 +220,7 @@
             </article>
 
             <!-- 7. Tourist's Plan -->
-            <article class="card reveal" data-category="apps">
+            <article class="card anim" data-anim="zoom-blur" style="--i:0" data-category="apps">
               <div class="card-accent" style="--accent: var(--blue)"></div>
               <div class="card-body">
                 <div class="card-header">
@@ -240,7 +239,7 @@
             </article>
 
             <!-- 8. Flappy Bird -->
-            <article class="card reveal" data-category="creative">
+            <article class="card anim" data-anim="flip-up" style="--i:1" data-category="creative">
               <div class="card-accent" style="--accent: var(--orange)"></div>
               <div class="card-body">
                 <div class="card-header">
@@ -259,7 +258,7 @@
             </article>
 
             <!-- 9. Superstore Analysis -->
-            <article class="card reveal" data-category="data">
+            <article class="card anim" data-anim="slide-left" style="--i:2" data-category="data">
               <div class="card-accent" style="--accent: var(--green)"></div>
               <div class="card-body">
                 <div class="card-header">
@@ -274,7 +273,7 @@
             </article>
 
             <!-- 10. Studio Ghibli Pipeline -->
-            <article class="card reveal" data-category="data">
+            <article class="card anim" data-anim="slide-right" style="--i:0" data-category="data">
               <div class="card-accent" style="--accent: var(--green)"></div>
               <div class="card-body">
                 <div class="card-header">
@@ -289,7 +288,7 @@
             </article>
 
             <!-- 11. UWC Egypt Crawler -->
-            <article class="card reveal" data-category="data">
+            <article class="card anim" data-anim="zoom-blur" style="--i:1" data-category="data">
               <div class="card-accent" style="--accent: var(--green)"></div>
               <div class="card-body">
                 <div class="card-header">
@@ -304,7 +303,7 @@
             </article>
 
             <!-- 12. Online Shopping Analytics -->
-            <article class="card reveal" data-category="data">
+            <article class="card anim" data-anim="flip-up" style="--i:2" data-category="data">
               <div class="card-accent" style="--accent: var(--green)"></div>
               <div class="card-body">
                 <div class="card-header">
@@ -319,7 +318,7 @@
             </article>
 
             <!-- 13. Mars Multi-Source Data -->
-            <article class="card reveal" data-category="data">
+            <article class="card anim" data-anim="slide-left" style="--i:0" data-category="data">
               <div class="card-accent" style="--accent: var(--green)"></div>
               <div class="card-body">
                 <div class="card-header">
@@ -340,23 +339,23 @@
       <!-- ─── TECH STACK ─── -->
       <section id="stack" class="stack-section">
         <div class="container">
-          <div class="section-tag reveal"><span class="tag-num">03</span> Tech Stack</div>
-          <h2 class="reveal">Technologies I work with.</h2>
-          <p class="section-desc reveal">Only technologies confirmed in real project source code.</p>
-          <div class="stack-grid reveal">
-            <div class="stack-group">
+          <div class="section-tag anim" data-anim="blur-up"><span class="tag-num">03</span> Tech Stack</div>
+          <h2 class="anim" data-anim="slide-left">Technologies I work with.</h2>
+          <p class="section-desc anim" data-anim="blur-up">Only technologies confirmed in real project source code.</p>
+          <div class="stack-grid">
+            <div class="stack-group anim" data-anim="flip-up" style="--i:0">
               <h4>Languages</h4>
               <ul><li>Python</li><li>JavaScript</li><li>TypeScript</li><li>SQL</li><li>HTML/CSS</li><li>C++ (Arduino)</li></ul>
             </div>
-            <div class="stack-group">
+            <div class="stack-group anim" data-anim="flip-up" style="--i:1">
               <h4>Frameworks</h4>
               <ul><li>React</li><li>Express</li><li>Flask</li><li>Tailwind CSS</li><li>Vite</li></ul>
             </div>
-            <div class="stack-group">
+            <div class="stack-group anim" data-anim="flip-up" style="--i:2">
               <h4>Data & AI</h4>
               <ul><li>Pandas</li><li>NumPy</li><li>Matplotlib</li><li>Seaborn</li><li>TensorFlow</li><li>SQLite</li></ul>
             </div>
-            <div class="stack-group">
+            <div class="stack-group anim" data-anim="flip-up" style="--i:3">
               <h4>Tools</h4>
               <ul><li>Git & GitHub</li><li>PostgreSQL</li><li>Supabase</li><li>Playwright</li><li>Node.js</li></ul>
             </div>
@@ -366,7 +365,7 @@
 
       <!-- ─── CONTACT ─── -->
       <section class="contact">
-        <div class="container reveal">
+        <div class="container anim" data-anim="zoom-blur">
           <p class="hero-eyebrow"><span class="dot"></span> Always building</p>
           <h2>Let's connect.</h2>
           <p class="section-desc">Follow the experiments, projects, and what comes next on GitHub.</p>
