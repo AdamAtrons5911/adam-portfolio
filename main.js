@@ -1,47 +1,61 @@
-const navToggle = document.querySelector(".nav-toggle"),
-  nav = document.querySelector(".site-nav"),
-  navLinks = document.querySelectorAll(".site-nav a"),
-  filters = document.querySelectorAll(".filter-button"),
-  cards = document.querySelectorAll(".experiment-card"),
-  status = document.querySelector(".filter-status");
+// ─── Year ───
 document.getElementById("year").textContent = new Date().getFullYear();
-if (navToggle && nav) {
-  navToggle.addEventListener("click", () => {
-    const e = nav.classList.toggle("is-open");
-    navToggle.setAttribute("aria-expanded", String(e));
+
+// ─── Mobile Nav Toggle ───
+const toggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".nav");
+const navLinks = document.querySelectorAll(".nav a");
+
+if (toggle && nav) {
+  toggle.addEventListener("click", () => {
+    const open = nav.classList.toggle("is-open");
+    toggle.setAttribute("aria-expanded", String(open));
   });
-  navLinks.forEach((e) =>
-    e.addEventListener("click", () => {
+  navLinks.forEach((link) =>
+    link.addEventListener("click", () => {
       nav.classList.remove("is-open");
-      navToggle.setAttribute("aria-expanded", "false");
-    }),
+      toggle.setAttribute("aria-expanded", "false");
+    })
   );
 }
-filters.forEach((e) => {
-  e.addEventListener("click", () => {
-    const t = e.dataset.filter;
-    let n = 0;
-    filters.forEach((t) => t.classList.toggle("is-active", t === e));
-    cards.forEach((e) => {
-      const s = t === "all" || e.dataset.tags.includes(t);
-      e.classList.toggle("is-hidden", !s);
-      if (s) n += 1;
+
+// ─── Project Filters ───
+const filters = document.querySelectorAll(".filter-btn");
+const cards = document.querySelectorAll(".card");
+
+filters.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const cat = btn.dataset.filter;
+    filters.forEach((b) => b.classList.toggle("is-active", b === btn));
+    cards.forEach((card) => {
+      const match = cat === "all" || card.dataset.category === cat;
+      card.classList.toggle("is-hidden", !match);
     });
-    status.textContent =
-      t === "all"
-        ? "Showing all " + n + " projects"
-        : "Showing " + n + " " + t + " projects";
   });
 });
+
+// ─── Scroll Reveal ───
 const revealObserver = new IntersectionObserver(
-  (e) => {
-    e.forEach((e) => {
-      if (e.isIntersecting) {
-        e.target.classList.add("is-visible");
-        revealObserver.unobserve(e.target);
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        revealObserver.unobserve(entry.target);
       }
     });
   },
-  { threshold: 0.12 },
+  { threshold: 0.1 }
 );
-document.querySelectorAll(".reveal").forEach((e) => revealObserver.observe(e));
+
+document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+
+// ─── Smooth scroll for anchor links ───
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", (e) => {
+    const target = document.querySelector(anchor.getAttribute("href"));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
