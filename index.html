@@ -3,386 +3,841 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Adam — a student builder from Cairo, Egypt crafting software systems, data pipelines, AI prototypes, and creative projects." />
+    <meta name="description" content="Adam — 15yo student builder, developer & researcher from Egypt. Software systems, Data science, AI/IoT prototypes & Design." />
     <meta name="theme-color" content="#09090b" />
-    <meta property="og:title" content="Adam — Builder · Developer · Creator" />
-    <meta property="og:description" content="Portfolio showcasing software systems, data analyses, AI prototypes, and creative experiments by Adam." />
+    <meta property="og:title" content="Adam — Builder · Developer · Systems" />
+    <meta property="og:description" content="Explore real projects, live applications, data pipelines, and research by Adam." />
     <meta property="og:type" content="website" />
-    <title>Adam — Builder · Developer · Creator</title>
+    <title>Adam — Software · Data · AI · Robotics</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="grain" aria-hidden="true"></div>
+    <!-- Top Scroll Progress Bar -->
+    <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
 
-    <header class="header">
+    <!-- Mouse Spotlight Glow -->
+    <div id="cursor-glow" class="cursor-glow" aria-hidden="true"></div>
+
+    <!-- Background Noise & Gradients -->
+    <div class="grain" aria-hidden="true"></div>
+    <div class="ambient-glow ambient-glow-1" aria-hidden="true"></div>
+    <div class="ambient-glow ambient-glow-2" aria-hidden="true"></div>
+
+    <!-- ─── HEADER ─── -->
+    <header class="header" id="header">
       <div class="container header-inner">
-        <a class="logo" href="#top" aria-label="Adam — Home">
-          <span class="logo-mark">A</span>
-          <span class="logo-text">Adam</span>
+        <a class="logo" href="#top" aria-label="Adam Home">
+          <div class="logo-box">
+            <span class="logo-letter">A</span>
+          </div>
+          <span class="logo-name">Adam</span>
           <span class="logo-ar" lang="ar" dir="rtl">آدم</span>
         </a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav">
-          <span class="sr-only">Menu</span>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Toggle navigation">
           <span class="bar"></span><span class="bar"></span>
         </button>
-        <nav id="nav" class="nav" aria-label="Main">
-          <a href="#projects">Projects</a>
-          <a href="#about">About</a>
-          <a href="#stack">Stack</a>
-          <a href="https://github.com/AdamAtrons5911" target="_blank" rel="noreferrer" class="nav-cta">GitHub <span aria-hidden="true">↗</span></a>
+
+        <nav id="nav" class="nav" aria-label="Main Navigation">
+          <a href="#projects" class="nav-link"><span>01.</span> Projects</a>
+          <a href="#about" class="nav-link"><span>02.</span> About & Story</a>
+          <a href="#stack" class="nav-link"><span>03.</span> Tech Stack</a>
+          <a href="https://github.com/AdamAtrons5911" target="_blank" rel="noreferrer" class="nav-github-btn">
+            <svg class="gh-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            GitHub Profile
+            <span class="arrow-out">↗</span>
+          </a>
         </nav>
       </div>
     </header>
 
     <main>
-      <!-- ─── HERO ─── -->
+      <!-- ─── HERO SECTION ─── -->
       <section id="top" class="hero">
         <div class="container hero-inner">
-          <div class="hero-content anim" data-anim="slide-left">
-            <p class="hero-eyebrow"><span class="dot"></span> Cairo, Egypt · 15 · Builder</p>
-            <h1>I build things<br />to <em>understand</em> them.</h1>
-            <p class="hero-sub">Software systems, data pipelines, AI prototypes, games, and design — all made by a curious student who learns by shipping.</p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="#projects">Explore Projects <span aria-hidden="true">↓</span></a>
-              <a class="btn btn-ghost" href="https://github.com/AdamAtrons5911" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <div class="hero-content">
+            <div class="hero-status-pill">
+              <span class="live-pulse"></span>
+              <span>Available for collaborations & systems building</span>
             </div>
-            <dl class="hero-stats">
-              <div><dt>Projects</dt><dd>13</dd></div>
-              <div><dt>Domains</dt><dd>5</dd></div>
-              <div><dt>Technologies</dt><dd>20+</dd></div>
-            </dl>
+
+            <h1 class="hero-title">
+              I build <span class="gradient-text">working systems</span> from scratch.
+            </h1>
+
+            <p class="hero-desc">
+              Hey, I'm <strong>Adam</strong> — 15-year-old student builder from Egypt. I explore the intersection of full-stack software, data analytics, AI anomaly detection, robotics, and creative gamification.
+            </p>
+
+            <div class="hero-cta-group">
+              <a class="btn btn-primary" href="#projects">
+                <span>View My Work (15+ Projects)</span>
+                <span class="btn-arrow">↓</span>
+              </a>
+              <a class="btn btn-secondary" href="https://github.com/AdamAtrons5911" target="_blank" rel="noreferrer">
+                <svg class="gh-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                <span>GitHub Repositories</span>
+                <span class="arrow-out">↗</span>
+              </a>
+            </div>
+
+            <div class="hero-metrics">
+              <div class="metric-card">
+                <span class="metric-val">3x</span>
+                <span class="metric-lbl">ISEF Participant</span>
+              </div>
+              <div class="metric-card">
+                <span class="metric-val">15+</span>
+                <span class="metric-lbl">Built Projects</span>
+              </div>
+              <div class="metric-card">
+                <span class="metric-val">400+</span>
+                <span class="metric-lbl">Students Led (Dawwie)</span>
+              </div>
+              <div class="metric-card">
+                <span class="metric-val">DEBI</span>
+                <span class="metric-lbl">Graduate</span>
+              </div>
+            </div>
           </div>
-          <div class="hero-visual anim" data-anim="zoom-blur" aria-hidden="true">
-            <div class="hv-ring hv-ring-1"></div>
-            <div class="hv-ring hv-ring-2"></div>
-            <div class="hv-core"><span>&lt;/&gt;</span></div>
-            <div class="hv-node hv-node-1"><span>Software</span></div>
-            <div class="hv-node hv-node-2"><span>Data</span></div>
-            <div class="hv-node hv-node-3"><span>AI</span></div>
-            <div class="hv-node hv-node-4"><span>Design</span></div>
+
+          <!-- Interactive 3D Orbit Node Map -->
+          <div class="hero-orbit-box" id="hero-orbit" aria-hidden="true">
+            <div class="orbit-center">
+              <div class="orbit-center-core">
+                <span>ADAM</span>
+                <small>BUILDER</small>
+              </div>
+              <div class="orbit-ring orbit-ring-1"></div>
+              <div class="orbit-ring orbit-ring-2"></div>
+              <div class="orbit-ring orbit-ring-3"></div>
+
+              <div class="floating-badge badge-software" data-speed="1.2">
+                <span class="badge-icon">⚡</span>
+                <span class="badge-txt">Software</span>
+              </div>
+              <div class="floating-badge badge-data" data-speed="1.8">
+                <span class="badge-icon">📊</span>
+                <span class="badge-txt">Data Science</span>
+              </div>
+              <div class="floating-badge badge-ai" data-speed="1.5">
+                <span class="badge-icon">🤖</span>
+                <span class="badge-txt">AI & IoT</span>
+              </div>
+              <div class="floating-badge badge-design" data-speed="2.0">
+                <span class="badge-icon">🎨</span>
+                <span class="badge-txt">Design</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- ─── ABOUT ─── -->
-      <section id="about" class="about">
+      <!-- ─── PROJECTS SECTION WITH VISUAL SCREENSHOTS ─── -->
+      <section id="projects" class="projects-section">
         <div class="container">
-          <div class="section-tag anim" data-anim="blur-up"><span class="tag-num">01</span> About</div>
-          <div class="about-grid">
-            <div class="about-text anim" data-anim="slide-left">
-              <h2>A builder first.<br />A learner by default.</h2>
-              <p>I'm Adam — I explore the space between code, data, AI, and design by making real things. From a browser-based OS to an ISEF science project, every project teaches me something new.</p>
-              <p>My strongest areas: Python & SQL for data analysis, full-stack web development (React, TypeScript, Node), and the hardware-software intersection in AI/IoT.</p>
+          <div class="section-header">
+            <div class="section-tag-pill">
+              <span class="tag-dot"></span>
+              <span>PORTFOLIO SHOWCASE</span>
             </div>
-            <div class="capabilities">
-              <article class="cap-card anim" data-anim="flip-up" style="--cap-accent: var(--blue); --i:0">
-                <span class="cap-num">01</span>
-                <h3>Software Systems</h3>
-                <p>Browser-based tools, full-stack web apps, and prototypes with thoughtful architecture.</p>
-              </article>
-              <article class="cap-card anim" data-anim="flip-up" style="--cap-accent: var(--green); --i:1">
-                <span class="cap-num">02</span>
-                <h3>Data Analysis</h3>
-                <p>Cleaning, exploring, and visualizing structured datasets with Python, Pandas, and SQL.</p>
-              </article>
-              <article class="cap-card anim" data-anim="flip-up" style="--cap-accent: var(--purple); --i:2">
-                <span class="cap-num">03</span>
-                <h3>AI & Robotics</h3>
-                <p>Sensor data, anomaly detection, hardware integration, and machine learning prototypes.</p>
-              </article>
-              <article class="cap-card anim" data-anim="flip-up" style="--cap-accent: var(--orange); --i:3">
-                <span class="cap-num">04</span>
-                <h3>Creative & Design</h3>
-                <p>Game development, graphic design, branding, and interactive visual experiences.</p>
-              </article>
-            </div>
+            <h2 class="section-title">Projects & Live Work</h2>
+            <p class="section-subtitle">
+              Every project below was engineered with real code, notebooks, or live deployments. Click live links or GitHub buttons to inspect the work.
+            </p>
+          </div>
+
+          <!-- Category Filters -->
+          <div class="project-filter-tabs" role="toolbar" aria-label="Filter Projects">
+            <button class="filter-tab active" data-filter="all" type="button">
+              <span>All Projects</span>
+              <span class="count">15</span>
+            </button>
+            <button class="filter-tab" data-filter="apps" type="button">
+              <span>💻 Software & Web</span>
+              <span class="count">4</span>
+            </button>
+            <button class="filter-tab" data-filter="ai-science" type="button">
+              <span>🔬 AI, IoT & Science</span>
+              <span class="count">3</span>
+            </button>
+            <button class="filter-tab" data-filter="data" type="button">
+              <span>📈 Data Analytics</span>
+              <span class="count">5</span>
+            </button>
+            <button class="filter-tab" data-filter="creative" type="button">
+              <span>🎮 Creative & Design</span>
+              <span class="count">3</span>
+            </button>
+          </div>
+
+          <!-- Projects Grid with Screenshots -->
+          <div class="projects-bento-grid" id="projects-grid">
+
+            <!-- 1. Tourist's Plan (With Live Image) -->
+            <article class="p-card tilt-card" data-category="apps">
+              <div class="p-card-media">
+                <img src="assets/tourist_plan.png" alt="Tourist's Plan Screenshot" class="p-img" onerror="this.parentElement.classList.add('media-fallback')" />
+                <div class="media-overlay">
+                  <span class="media-tag">🌐 Live Web Application</span>
+                </div>
+              </div>
+              <div class="p-card-body">
+                <div class="p-card-top">
+                  <span class="p-category cat-web">Full-Stack Web</span>
+                  <span class="p-status status-live">Live Deployed</span>
+                </div>
+                <h3 class="p-title">Tourist's Plan (خطة السائح)</h3>
+                <p class="p-desc">
+                  Interactive travel guidance & price anti-fraud platform for tourists visiting Egypt. Displays official monument tickets, flights, hotels, and fair market grocery prices to protect visitors from overpricing.
+                </p>
+                <ul class="p-stack">
+                  <li>JavaScript</li><li>HTML5 / CSS3</li><li>Cart Drawer</li><li>Responsive UI</li>
+                </ul>
+                <div class="p-links-row">
+                  <a href="https://adamatrons5911.github.io/tourist/index.html" target="_blank" rel="noreferrer" class="p-btn p-btn-live">
+                    <span>🚀 Launch Website</span>
+                    <span class="arrow">↗</span>
+                  </a>
+                  <a href="https://github.com/AdamAtrons5911/tourist" target="_blank" rel="noreferrer" class="p-btn p-btn-gh" title="View on GitHub">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>GitHub</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 2. Flappy Bird: Time Travel (With Live Image) -->
+            <article class="p-card tilt-card" data-category="creative">
+              <div class="p-card-media">
+                <img src="assets/flappy_bird.png" alt="Flappy Bird Across Arab History" class="p-img" onerror="this.parentElement.classList.add('media-fallback')" />
+                <div class="media-overlay">
+                  <span class="media-tag">🎮 2D Canvas Action Game</span>
+                </div>
+              </div>
+              <div class="p-card-body">
+                <div class="p-card-top">
+                  <span class="p-category cat-game">Game Development</span>
+                  <span class="p-status status-live">Playable in Browser</span>
+                </div>
+                <h3 class="p-title">Flappy Bird: Time Travel (عبر التاريخ العربي)</h3>
+                <p class="p-desc">
+                  Educational time-traveling adaptation of Flappy Bird flying across historical Arab & Islamic eras. Features dynamic background transitions, era quotes, shields, coin magnets, and procedural Web Audio sound synthesis.
+                </p>
+                <ul class="p-stack">
+                  <li>HTML5 Canvas</li><li>JavaScript ES6+</li><li>Web Audio API</li><li>Physics Engine</li>
+                </ul>
+                <div class="p-links-row">
+                  <a href="https://adamatrons5911.github.io/flappy-bird-history/index.html" target="_blank" rel="noreferrer" class="p-btn p-btn-live">
+                    <span>🎮 Play Game Now</span>
+                    <span class="arrow">↗</span>
+                  </a>
+                  <a href="https://github.com/AdamAtrons5911/flappy-bird-history" target="_blank" rel="noreferrer" class="p-btn p-btn-gh" title="View on GitHub">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>GitHub</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 3. Graphic Design & AI Art Showcase (With Live Image) -->
+            <article class="p-card tilt-card" data-category="creative">
+              <div class="p-card-media">
+                <img src="assets/graphic_design.png" alt="Graphic Design Portfolio Preview" class="p-img" onerror="this.parentElement.classList.add('media-fallback')" />
+                <div class="media-overlay">
+                  <span class="media-tag">🎨 Branding & Generative Art</span>
+                </div>
+              </div>
+              <div class="p-card-body">
+                <div class="p-card-top">
+                  <span class="p-category cat-design">Design & Branding</span>
+                  <span class="p-status status-live">Live Portfolio</span>
+                </div>
+                <h3 class="p-title">Graphic Design & AI Art Gallery (موقع التصميمات)</h3>
+                <p class="p-desc">
+                  Dedicated Arabic design portfolio showcasing commercial branding (Vitamix Juice Bar, Burger campaign), YouTube 3L Taier channel banners, youth podcast identities (شبابنا), and Midjourney generative artwork.
+                </p>
+                <ul class="p-stack">
+                  <li>Photoshop</li><li>Illustrator</li><li>Generative AI</li><li>Brand Identity</li>
+                </ul>
+                <div class="p-links-row">
+                  <a href="https://adamatrons5911.github.io/design-website/" target="_blank" rel="noreferrer" class="p-btn p-btn-live">
+                    <span>✨ Explore Designs</span>
+                    <span class="arrow">↗</span>
+                  </a>
+                  <a href="https://github.com/AdamAtrons5911/design-website" target="_blank" rel="noreferrer" class="p-btn p-btn-gh" title="View on GitHub">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>GitHub</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 4. AdamOS (UI Mockup Frame) -->
+            <article class="p-card tilt-card" data-category="apps">
+              <div class="p-card-media ui-mockup-media os-mockup">
+                <div class="mockup-header">
+                  <div class="mockup-dots"><span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span></div>
+                  <span class="mockup-title">AdamOS v2.4 — Browser Operating System</span>
+                </div>
+                <div class="os-mini-desktop">
+                  <div class="os-mini-app"><span>📊</span><small>Planner</small></div>
+                  <div class="os-mini-app"><span>🎓</span><small>Study</small></div>
+                  <div class="os-mini-app"><span>⚡</span><small>BlockOS</small></div>
+                  <div class="os-mini-app"><span>⏱️</span><small>Focus</small></div>
+                </div>
+              </div>
+              <div class="p-card-body">
+                <div class="p-card-top">
+                  <span class="p-category cat-sys">Architecture & Systems</span>
+                  <span class="p-status status-code">Source on GitHub</span>
+                </div>
+                <h3 class="p-title">AdamOS & BlockOS Architecture</h3>
+                <p class="p-desc">
+                  Browser-based personal operating system with drag-and-drop window manager, study workspace, habits, diary, deep focus, seasonal challenges, and Playwright end-to-end regression testing.
+                </p>
+                <ul class="p-stack">
+                  <li>JavaScript (ES6 Modules)</li><li>HTML5/CSS3</li><li>LocalStorage V2</li><li>Playwright E2E</li>
+                </ul>
+                <div class="p-links-row">
+                  <a href="https://github.com/AdamAtrons5911/my-portfolio" target="_blank" rel="noreferrer" class="p-btn p-btn-gh-full">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>View Repository on GitHub</span>
+                    <span class="arrow">↗</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 5. Gharbawy (سكن الطلاب) -->
+            <article class="p-card tilt-card" data-category="apps">
+              <div class="p-card-media ui-mockup-media sakan-mockup">
+                <div class="mockup-header">
+                  <div class="mockup-dots"><span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span></div>
+                  <span class="mockup-title">غرباوى — منصة سكن الطلاب في مصر</span>
+                </div>
+                <div class="sakan-mini-ui">
+                  <div class="sakan-search-bar">📍 ابحث بجوار جامعتك (القاهرة، عين شمس، أسوان...)</div>
+                  <div class="sakan-tag-list"><span>بدون سمسار</span><span>سكن طالبات</span><span>قريب من المترو</span></div>
+                </div>
+              </div>
+              <div class="p-card-body">
+                <div class="p-card-top">
+                  <span class="p-category cat-web">Full-Stack TypeScript</span>
+                  <span class="p-status status-proto">Full-Stack Prototype</span>
+                </div>
+                <h3 class="p-title">Gharbawy (غرباوى / سكن الطلاب)</h3>
+                <p class="p-desc">
+                  Full-stack Arabic RTL platform engineered for Egyptian university students to discover and book affordable housing directly from landlords without broker exploitation. Includes interactive maps, gender filters, and booking state machines.
+                </p>
+                <ul class="p-stack">
+                  <li>React</li><li>TypeScript</li><li>Express.js</li><li>PostgreSQL / Drizzle</li>
+                </ul>
+                <div class="p-links-row">
+                  <a href="https://github.com/AdamAtrons5911" target="_blank" rel="noreferrer" class="p-btn p-btn-gh-full">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>Inspect Full-Stack Code</span>
+                    <span class="arrow">↗</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 6. MedShield (ISEF AI & IoT) -->
+            <article class="p-card tilt-card" data-category="ai-science">
+              <div class="p-card-media ui-mockup-media med-mockup">
+                <div class="mockup-header">
+                  <div class="mockup-dots"><span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span></div>
+                  <span class="mockup-title">MedShield IoT Sensor Stream & AI Anomaly Detection</span>
+                </div>
+                <div class="med-wave-container">
+                  <div class="med-sensor-badge"><span>🌡️ Temp: 4.2°C [STABLE]</span><span>💧 Trehalose Hydrogel</span></div>
+                  <div class="med-bars">
+                    <span style="height:35%"></span><span style="height:45%"></span><span style="height:88%; background:#f87171" title="Anomaly Detected"></span><span style="height:40%"></span><span style="height:60%"></span><span style="height:30%"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-card-body">
+                <div class="p-card-top">
+                  <span class="p-category cat-ai">AI, IoT & Science</span>
+                  <span class="p-status status-isef">ISEF Research</span>
+                </div>
+                <h3 class="p-title">MedShield — Smart Cold-Chain & AI Vaccine Shield</h3>
+                <p class="p-desc">
+                  Biomedical engineering system combining a Trehalose-hydrogel protective matrix (maintaining vaccine stability without continuous power) with IoT sensors and a TensorFlow autoencoder neural network for real-time anomaly alerts.
+                </p>
+                <ul class="p-stack">
+                  <li>Python / Flask</li><li>TensorFlow / Keras</li><li>Arduino (C++)</li><li>SQLite</li>
+                </ul>
+                <div class="p-links-row">
+                  <a href="https://github.com/AdamAtrons5911" target="_blank" rel="noreferrer" class="p-btn p-btn-gh-full">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    <span>View Model & Firmware Code</span>
+                    <span class="arrow">↗</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 7. Food Delivery Analysis (Data) -->
+            <article class="p-card tilt-card" data-category="data">
+              <div class="p-card-media data-chart-media">
+                <div class="chart-top-stat">
+                  <span class="chart-big-num">2,050</span>
+                  <small>Analyzed Delivery Orders</small>
+                </div>
+                <div class="chart-insights-pills">
+                  <span>⏱️ 33.4m Avg Duration</span>
+                  <span>📍 Cairo #1 (984)</span>
+                  <span>💳 Wallet #1 (699)</span>
+                </div>
+              </div>
+              <div class="p-card-body">
+                <div class="p-card-top">
+                  <span class="p-category cat-data">Data Science / EDA</span>
+                  <span class="p-status status-jupyter">Jupyter Notebooks</span>
+                </div>
+                <h3 class="p-title">Food Delivery Exploratory Analytics</h3>
+                <p class="p-desc">
+                  Two-part deep statistical analysis exploring customer purchasing behaviors, peak rush hours, payment gateway distributions, and delivery driver bottlenecks across Egyptian metropolitan areas.
+                </p>
+                <ul class="p-stack">
+                  <li>Python</li><li>Pandas</li><li>NumPy</li><li>Matplotlib / Seaborn</li>
+                </ul>
+                <div class="p-links-row">
+                  <a href="https://github.com/AdamAtrons5911" target="_blank" rel="noreferrer" class="p-btn p-btn-gh-full">
+                    <span>Inspect Data Analysis Notebooks</span>
+                    <span class="arrow">↗</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 8. Studio Ghibli Automated Data Pipeline (Data) -->
+            <article class="p-card tilt-card" data-category="data">
+              <div class="p-card-media pipeline-media">
+                <div class="pipeline-step">API Extraction <span>→</span></div>
+                <div class="pipeline-step">Pandas Clean <span>→</span></div>
+                <div class="pipeline-step">SQLite Ingestion <span>→</span></div>
+                <div class="pipeline-step">SQL Visuals</div>
+              </div>
+              <div class="p-card-body">
+                <div class="p-card-top">
+                  <span class="p-category cat-data">Data Engineering / ETL</span>
+                  <span class="p-status status-code">Automated Pipeline</span>
+                </div>
+                <h3 class="p-title">Studio Ghibli Data Pipeline</h3>
+                <p class="p-desc">
+                  End-to-end automated ETL pipeline fetching film and character metrics from public REST endpoints, validating schemas, relational ingestion into SQLite, and running automated SQL analytical aggregations.
+                </p>
+                <ul class="p-stack">
+                  <li>Python Requests</li><li>Pandas</li><li>SQLite3</li><li>SQL Analytics</li>
+                </ul>
+                <div class="p-links-row">
+                  <a href="https://github.com/AdamAtrons5911" target="_blank" rel="noreferrer" class="p-btn p-btn-gh-full">
+                    <span>View ETL Pipeline Code</span>
+                    <span class="arrow">↗</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 9. Maryam Journal (Software) -->
+            <article class="p-card tilt-card" data-category="apps">
+              <div class="p-card-media ui-mockup-media journal-mockup">
+                <div class="mockup-header">
+                  <div class="mockup-dots"><span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span></div>
+                  <span class="mockup-title">مذكرات مريم — Personal Journaling PWA</span>
+                </div>
+                <div class="journal-mini-view">
+                  <div class="j-quote">"يوم هادئ، طاقة إيجابية وإنجاز مشاريع جديدة"</div>
+                  <div class="j-moods"><span>✨ Mood: 9/10</span><span>⚡ Energy: High</span><span>📷 2 Photos</span></div>
+                </div>
+              </div>
+              <div class="p-card-body">
+                <div class="p-card-top">
+                  <span class="p-category cat-web">Progressive Web App</span>
+                  <span class="p-status status-code">React 19 / Supabase</span>
+                </div>
+                <h3 class="p-title">Maryam Journal (مذكرات مريم)</h3>
+                <p class="p-desc">
+                  Private reflective personal journaling PWA with authentication, mood tracking, energy level graphs, photo attachments, calendar archive, and monthly reflective insights.
+                </p>
+                <ul class="p-stack">
+                  <li>React 19</li><li>TypeScript</li><li>Tailwind CSS v4</li><li>Supabase</li>
+                </ul>
+                <div class="p-links-row">
+                  <a href="https://github.com/AdamAtrons5911" target="_blank" rel="noreferrer" class="p-btn p-btn-gh-full">
+                    <span>View Repository on GitHub</span>
+                    <span class="arrow">↗</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 10. DEBI Graduation Presentation (Tourism Info) -->
+            <article class="p-card tilt-card" data-category="ai-science">
+              <div class="p-card-media">
+                <img src="assets/tourism_info.png" alt="DEBI Graduation Project" class="p-img" onerror="this.parentElement.classList.add('media-fallback')" />
+                <div class="media-overlay">
+                  <span class="media-tag">🎓 DEBI Capstone Project</span>
+                </div>
+              </div>
+              <div class="p-card-body">
+                <div class="p-card-top">
+                  <span class="p-category cat-pres">Presentation & Leadership</span>
+                  <span class="p-status status-debi">أشبال مصر الرقمية</span>
+                </div>
+                <h3 class="p-title">DEBI Graduation Presentation (مشروع تخرج أشبال مصر)</h3>
+                <p class="p-desc">
+                  Capstone graduation deck delivered at the Digital Egypt Cubs Initiative (DEBI) covering strategic tourist destinations across Egypt with interactive cultural insights.
+                </p>
+                <ul class="p-stack">
+                  <li>DEBI Honors</li><li>Public Speaking</li><li>Research</li>
+                </ul>
+                <div class="p-links-row">
+                  <a href="https://aswan1moe-my.sharepoint.com/:p:/g/personal/482872260_aswan1_moe_edu_eg/EbGVo6Sl3IJJmNnAVvSUZwkBfZ5qi6mbvft2b6kSq7FgDw?e=MAaU1h" target="_blank" rel="noreferrer" class="p-btn p-btn-live">
+                    <span>📊 Open Slide Deck</span>
+                    <span class="arrow">↗</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 11. Tourist's Plan Financial Pitch Deck -->
+            <article class="p-card tilt-card" data-category="ai-science">
+              <div class="p-card-media">
+                <img src="assets/presentation.png" alt="Financial Deck for Tourist Plan" class="p-img" onerror="this.parentElement.classList.add('media-fallback')" />
+                <div class="media-overlay">
+                  <span class="media-tag">💼 Pitch & Financial Model</span>
+                </div>
+              </div>
+              <div class="p-card-body">
+                <div class="p-card-top">
+                  <span class="p-category cat-pres">Financial Model / Pitch</span>
+                  <span class="p-status status-debi">DEBI Summer Camp</span>
+                </div>
+                <h3 class="p-title">Tourist's Plan Financial & Business Deck</h3>
+                <p class="p-desc">
+                  Comprehensive financial forecast, pricing model, unit economics, and startup pitch deck created and presented during the Digital Egypt Cubs Initiative summer camp.
+                </p>
+                <ul class="p-stack">
+                  <li>Google Slides</li><li>Business Model</li><li>Financial Analysis</li>
+                </ul>
+                <div class="p-links-row">
+                  <a href="https://docs.google.com/presentation/d/1UghsqAzIStginXzPloASQ73uHEIP-_cn-sGf4s5a3lA/edit?usp=sharing" target="_blank" rel="noreferrer" class="p-btn p-btn-live">
+                    <span>📊 View Google Slides</span>
+                    <span class="arrow">↗</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 12. UWC Egypt Web Crawler (Data) -->
+            <article class="p-card tilt-card" data-category="data">
+              <div class="p-card-media terminal-media">
+                <div class="terminal-bar"><span>● ● ●</span><span>uwc_crawler.py</span></div>
+                <div class="terminal-code">
+                  <code>[+] Connecting to eg.uwc.org...</code>
+                  <code>[+] Scraping admissions criteria...</code>
+                  <code>[✓] Exported 52 records to uwc_data.csv</code>
+                </div>
+              </div>
+              <div class="p-card-body">
+                <div class="p-card-top">
+                  <span class="p-category cat-data">Automation & Scraping</span>
+                  <span class="p-status status-code">Python Script</span>
+                </div>
+                <h3 class="p-title">UWC Egypt Web Crawler</h3>
+                <p class="p-desc">
+                  Targeted web crawler designed to extract admissions guidelines, criteria, and articles from the United World Colleges Egypt portal into clean UTF-8 CSV datasets.
+                </p>
+                <ul class="p-stack">
+                  <li>Python 3</li><li>BeautifulSoup4</li><li>urllib / Requests</li><li>CSV Pipeline</li>
+                </ul>
+                <div class="p-links-row">
+                  <a href="https://github.com/AdamAtrons5911" target="_blank" rel="noreferrer" class="p-btn p-btn-gh-full">
+                    <span>View Crawler Code</span>
+                    <span class="arrow">↗</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 13. Superstore Exploratory Analysis (Data) -->
+            <article class="p-card tilt-card" data-category="data">
+              <div class="p-card-body" style="padding-top: 1.8rem;">
+                <div class="p-card-top">
+                  <span class="p-category cat-data">Kaggle Data Analysis</span>
+                  <span class="p-status status-jupyter">EDA Notebook</span>
+                </div>
+                <h3 class="p-title">Superstore Profit & Regional Velocity</h3>
+                <p class="p-desc">
+                  Business intelligence data exploration investigating sales margins vs. discount rates, regional logistics shipping modes, and profit anomalies across product categories.
+                </p>
+                <ul class="p-stack">
+                  <li>Python</li><li>Pandas</li><li>Matplotlib</li><li>Jupyter</li>
+                </ul>
+                <div class="p-links-row">
+                  <a href="https://github.com/AdamAtrons5911" target="_blank" rel="noreferrer" class="p-btn p-btn-gh-full">
+                    <span>View Analysis on GitHub</span>
+                    <span class="arrow">↗</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 14. Online Shopping Customer Analytics (Data) -->
+            <article class="p-card tilt-card" data-category="data">
+              <div class="p-card-body" style="padding-top: 1.8rem;">
+                <div class="p-card-top">
+                  <span class="p-category cat-data">Customer Segmentation</span>
+                  <span class="p-status status-jupyter">Data Notebook</span>
+                </div>
+                <h3 class="p-title">Online Shopping Customer Analytics</h3>
+                <p class="p-desc">
+                  End-to-end customer clustering on a 1,000-row synthetic dataset deriving total customer lifetime spending, rating distributions, and demographic shopping habits.
+                </p>
+                <ul class="p-stack">
+                  <li>Python</li><li>JSON Processing</li><li>Matplotlib</li>
+                </ul>
+                <div class="p-links-row">
+                  <a href="https://github.com/AdamAtrons5911" target="_blank" rel="noreferrer" class="p-btn p-btn-gh-full">
+                    <span>View Analysis on GitHub</span>
+                    <span class="arrow">↗</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 15. Mars Multi-Source Data Integration -->
+            <article class="p-card tilt-card" data-category="data">
+              <div class="p-card-body" style="padding-top: 1.8rem;">
+                <div class="p-card-top">
+                  <span class="p-category cat-data">Data Engineering Lab</span>
+                  <span class="p-status status-code">Multi-Format ETL</span>
+                </div>
+                <h3 class="p-title">Mars Multi-Source Data Integration</h3>
+                <p class="p-desc">
+                  Heterogeneous data ingestion lab unifying 5 distinct sources (CSV, TSV, JSON, SQLite, and raw HTML tables) into a consolidated relational analysis pipeline.
+                </p>
+                <ul class="p-stack">
+                  <li>Pandas</li><li>SQLite3</li><li>HTML Table Parsing</li>
+                </ul>
+                <div class="p-links-row">
+                  <a href="https://github.com/AdamAtrons5911" target="_blank" rel="noreferrer" class="p-btn p-btn-gh-full">
+                    <span>View Integration Code</span>
+                    <span class="arrow">↗</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
           </div>
         </div>
       </section>
 
-      <!-- ─── PROJECTS ─── -->
-      <section id="projects" class="projects">
+      <!-- ─── ABOUT & STORY SECTION ─── -->
+      <section id="about" class="about-section">
         <div class="container">
-          <div class="section-tag anim" data-anim="blur-up"><span class="tag-num">02</span> Projects</div>
-          <h2 class="anim" data-anim="slide-left">Everything I've built.</h2>
-          <p class="section-desc anim" data-anim="blur-up">13 projects across software, data, AI, and creative work. Each one taught me something different.</p>
-
-          <div class="filter-bar anim" data-anim="flip-up" role="toolbar" aria-label="Filter projects">
-            <button class="filter-btn is-active" data-filter="all" type="button">All <span>13</span></button>
-            <button class="filter-btn" data-filter="apps" type="button">Software <span>4</span></button>
-            <button class="filter-btn" data-filter="data" type="button">Data <span>6</span></button>
-            <button class="filter-btn" data-filter="ai" type="button">AI & IoT <span>1</span></button>
-            <button class="filter-btn" data-filter="creative" type="button">Creative <span>2</span></button>
-          </div>
-
-          <div class="project-grid">
-
-            <!-- 1. AdamOS -->
-            <article class="card anim" data-anim="slide-left" style="--i:0" data-category="apps">
-              <div class="card-accent" style="--accent: var(--blue)"></div>
-              <div class="card-body">
-                <div class="card-header">
-                  <span class="badge" style="--badge-color: var(--blue)">Software System</span>
+          <div class="about-flex-layout">
+            <div class="about-left">
+              <div class="section-tag-pill">
+                <span class="tag-dot"></span>
+                <span>BIOGRAPHY & LEADERSHIP</span>
+              </div>
+              <h2 class="about-heading">
+                Building systems.<br />
+                Leading teams.<br />
+                <span class="gradient-text">Never stopping.</span>
+              </h2>
+              <p class="about-p">
+                I'm <strong>Adam Abdullah</strong> from Aswan, Egypt. I got into technology early and never looked back. Whether it's training an autoencoder on IoT telemetry, architecting an operating system interface, or leading youth camps, I thrive on turning ideas into reality.
+              </p>
+              <p class="about-p">
+                In Summer 2024, I served as the <strong>President of the "Dawwie" (دوي) Summer Camp</strong>, leading, organizing, and mentoring over <strong>400+ students</strong> across diverse technical and cultural teams.
+              </p>
+              <div class="about-achievements">
+                <div class="achieve-item">
+                  <span class="achieve-icon">🏆</span>
+                  <div>
+                    <strong>3x ISEF Science & Engineering Fair</strong>
+                    <small>Biomedical & IoT thermal protection for vaccines</small>
+                  </div>
                 </div>
-                <h3>AdamOS</h3>
-                <p>A browser-based personal operating system for planning, study sessions, habits, deep focus, diary, and seasonal challenges — with full RTL support and Playwright regression tests.</p>
-                <ul class="tech-stack">
-                  <li>JavaScript</li><li>HTML/CSS</li><li>LocalStorage</li><li>Playwright</li>
-                </ul>
-                <div class="card-links">
-                  <a href="https://github.com/AdamAtrons5911/my-portfolio" target="_blank" rel="noreferrer" class="card-link">GitHub <span>↗</span></a>
+                <div class="achieve-item">
+                  <span class="achieve-icon">📖</span>
+                  <div>
+                    <strong>National Reading Project Finalist</strong>
+                    <small>Represented Aswan at the New Administrative Capital</small>
+                  </div>
+                </div>
+                <div class="achieve-item">
+                  <span class="achieve-icon">🎓</span>
+                  <div>
+                    <strong>Digital Egypt Cubs Initiative (DEBI)</strong>
+                    <small>Graduated top honors in software & digital innovation</small>
+                  </div>
                 </div>
               </div>
-            </article>
+            </div>
 
-            <!-- 2. Gharbawy -->
-            <article class="card anim" data-anim="slide-right" style="--i:1" data-category="apps">
-              <div class="card-accent" style="--accent: var(--blue)"></div>
-              <div class="card-body">
-                <div class="card-header">
-                  <span class="badge" style="--badge-color: var(--blue)">Full-Stack Web</span>
+            <div class="about-right">
+              <div class="pillars-card">
+                <h3>Core Engineering Focus</h3>
+                <div class="pillar-box" style="--accent: var(--blue)">
+                  <div class="pillar-header">
+                    <span class="pillar-num">01</span>
+                    <h4>Full-Stack & Web Architecture</h4>
+                  </div>
+                  <p>React, TypeScript, Express, PostgreSQL, Vanilla JS modular design, Playwright regression testing.</p>
                 </div>
-                <h3>Gharbawy (غرباوى)</h3>
-                <p>A full-stack Arabic RTL housing platform for Egyptian university students to find and book housing directly from property owners — with interactive maps, booking flows, and authentication.</p>
-                <ul class="tech-stack">
-                  <li>React</li><li>TypeScript</li><li>Express</li><li>PostgreSQL</li>
-                </ul>
-              </div>
-            </article>
-
-            <!-- 3. MedShield -->
-            <article class="card anim" data-anim="zoom-blur" style="--i:2" data-category="ai">
-              <div class="card-accent" style="--accent: var(--purple)"></div>
-              <div class="card-body">
-                <div class="card-header">
-                  <span class="badge" style="--badge-color: var(--purple)">AI & IoT · ISEF</span>
+                <div class="pillar-box" style="--accent: var(--green)">
+                  <div class="pillar-header">
+                    <span class="pillar-num">02</span>
+                    <h4>Data Science & Pipelines</h4>
+                  </div>
+                  <p>Exploratory analytics, automated web scraping (BS4), relational SQLite workflows, Pandas, Seaborn.</p>
                 </div>
-                <h3>MedShield</h3>
-                <p>Smart vaccine cold-chain monitoring system combining a Trehalose-hydrogel protective matrix with IoT sensors and a TensorFlow autoencoder for real-time anomaly detection.</p>
-                <ul class="tech-stack">
-                  <li>Python</li><li>TensorFlow</li><li>Flask</li><li>SQLite</li><li>Arduino</li>
-                </ul>
-              </div>
-            </article>
-
-            <!-- 4. Maryam Journal -->
-            <article class="card anim" data-anim="flip-up" style="--i:0" data-category="apps">
-              <div class="card-accent" style="--accent: var(--blue)"></div>
-              <div class="card-body">
-                <div class="card-header">
-                  <span class="badge" style="--badge-color: var(--blue)">Web App (PWA)</span>
+                <div class="pillar-box" style="--accent: var(--purple)">
+                  <div class="pillar-header">
+                    <span class="pillar-num">03</span>
+                    <h4>AI, IoT & Hardware</h4>
+                  </div>
+                  <p>TensorFlow autoencoders, anomaly detection, Arduino sensors, C++ embedded firmware.</p>
                 </div>
-                <h3>Maryam Journal</h3>
-                <p>A private journaling progressive web app with authentication, mood & energy tracking, photo entries, calendar views, and monthly reflections.</p>
-                <ul class="tech-stack">
-                  <li>React</li><li>TypeScript</li><li>Tailwind</li><li>Supabase</li>
-                </ul>
-              </div>
-            </article>
-
-            <!-- 5. Graphic Design Portfolio -->
-            <article class="card anim" data-anim="slide-left" style="--i:1" data-category="creative">
-              <div class="card-accent" style="--accent: var(--orange)"></div>
-              <div class="card-body">
-                <div class="card-header">
-                  <span class="badge" style="--badge-color: var(--orange)">Design Portfolio</span>
-                  <span class="badge badge-new">NEW</span>
-                </div>
-                <h3>Graphic Design & AI Art</h3>
-                <p>A visual showcase of branding, marketing posters, event graphics, and AI-generated artwork — including work for clubs, channels, and campaigns.</p>
-                <ul class="tech-stack">
-                  <li>Photoshop</li><li>Illustrator</li><li>Canva</li><li>AI Art</li>
-                </ul>
-                <div class="card-links">
-                  <a href="https://adamatrons5911.github.io/design-website/" target="_blank" rel="noreferrer" class="card-link card-link-live">Live Site <span>↗</span></a>
-                  <a href="https://github.com/AdamAtrons5911/design-website" target="_blank" rel="noreferrer" class="card-link">GitHub <span>↗</span></a>
+                <div class="pillar-box" style="--accent: var(--orange)">
+                  <div class="pillar-header">
+                    <span class="pillar-num">04</span>
+                    <h4>Branding, UI & Gamification</h4>
+                  </div>
+                  <p>HTML5 Canvas physics, Web Audio API synthesis, commercial branding, promotional collateral.</p>
                 </div>
               </div>
-            </article>
-
-            <!-- 6. Food Delivery Analysis -->
-            <article class="card anim" data-anim="slide-right" style="--i:2" data-category="data">
-              <div class="card-accent" style="--accent: var(--green)"></div>
-              <div class="card-body">
-                <div class="card-header">
-                  <span class="badge" style="--badge-color: var(--green)">Data Analysis</span>
-                </div>
-                <h3>Food Delivery Analysis</h3>
-                <p>Two-part EDA of 2,050 food delivery orders — exploring customer behavior, delivery patterns, payment methods, and city distributions.</p>
-                <ul class="tech-stack">
-                  <li>Python</li><li>Pandas</li><li>NumPy</li><li>Matplotlib</li><li>Seaborn</li>
-                </ul>
-              </div>
-            </article>
-
-            <!-- 7. Tourist's Plan -->
-            <article class="card anim" data-anim="zoom-blur" style="--i:0" data-category="apps">
-              <div class="card-accent" style="--accent: var(--blue)"></div>
-              <div class="card-body">
-                <div class="card-header">
-                  <span class="badge" style="--badge-color: var(--blue)">Web Project</span>
-                </div>
-                <h3>Tourist's Plan</h3>
-                <p>A tourism guidance platform showing official ticket prices, flights, hotels, and food costs — designed to protect tourists in Egypt from overpricing and fraud.</p>
-                <ul class="tech-stack">
-                  <li>HTML</li><li>CSS</li><li>JavaScript</li>
-                </ul>
-                <div class="card-links">
-                  <a href="https://adamatrons5911.github.io/tourist/index.html" target="_blank" rel="noreferrer" class="card-link card-link-live">Live Site <span>↗</span></a>
-                  <a href="https://github.com/AdamAtrons5911/tourist" target="_blank" rel="noreferrer" class="card-link">GitHub <span>↗</span></a>
-                </div>
-              </div>
-            </article>
-
-            <!-- 8. Flappy Bird -->
-            <article class="card anim" data-anim="flip-up" style="--i:1" data-category="creative">
-              <div class="card-accent" style="--accent: var(--orange)"></div>
-              <div class="card-body">
-                <div class="card-header">
-                  <span class="badge" style="--badge-color: var(--orange)">Game Dev</span>
-                </div>
-                <h3>Flappy Bird: Time Travel</h3>
-                <p>An educational HTML5 game flying through historical eras of the Arab world — with era-specific visuals, power-ups, and procedural Web Audio sound.</p>
-                <ul class="tech-stack">
-                  <li>HTML5 Canvas</li><li>JavaScript</li><li>Web Audio API</li>
-                </ul>
-                <div class="card-links">
-                  <a href="https://adamatrons5911.github.io/flappy-bird-history/index.html" target="_blank" rel="noreferrer" class="card-link card-link-live">Play It <span>↗</span></a>
-                  <a href="https://github.com/AdamAtrons5911/flappy-bird-history" target="_blank" rel="noreferrer" class="card-link">GitHub <span>↗</span></a>
-                </div>
-              </div>
-            </article>
-
-            <!-- 9. Superstore Analysis -->
-            <article class="card anim" data-anim="slide-left" style="--i:2" data-category="data">
-              <div class="card-accent" style="--accent: var(--green)"></div>
-              <div class="card-body">
-                <div class="card-header">
-                  <span class="badge" style="--badge-color: var(--green)">Data Analysis</span>
-                </div>
-                <h3>Superstore Exploratory Analysis</h3>
-                <p>Exploring sales, profit, category, region, and quantity patterns in a Kaggle Superstore dataset with visualizations and business insights.</p>
-                <ul class="tech-stack">
-                  <li>Python</li><li>Pandas</li><li>Matplotlib</li>
-                </ul>
-              </div>
-            </article>
-
-            <!-- 10. Studio Ghibli Pipeline -->
-            <article class="card anim" data-anim="slide-right" style="--i:0" data-category="data">
-              <div class="card-accent" style="--accent: var(--green)"></div>
-              <div class="card-body">
-                <div class="card-header">
-                  <span class="badge" style="--badge-color: var(--green)">Data Pipeline</span>
-                </div>
-                <h3>Studio Ghibli Data Pipeline</h3>
-                <p>Automated ETL pipeline: fetching film data from a REST API → cleaning with Pandas → loading into SQLite → running SQL queries → plotting insights.</p>
-                <ul class="tech-stack">
-                  <li>Python</li><li>Requests</li><li>Pandas</li><li>SQLite</li>
-                </ul>
-              </div>
-            </article>
-
-            <!-- 11. UWC Egypt Crawler -->
-            <article class="card anim" data-anim="zoom-blur" style="--i:1" data-category="data">
-              <div class="card-accent" style="--accent: var(--green)"></div>
-              <div class="card-body">
-                <div class="card-header">
-                  <span class="badge" style="--badge-color: var(--green)">Web Scraping</span>
-                </div>
-                <h3>UWC Egypt Web Crawler</h3>
-                <p>A web crawler that scrapes admissions criteria and requirements from the UWC Egypt portal and outputs clean UTF-8 CSV datasets.</p>
-                <ul class="tech-stack">
-                  <li>Python</li><li>BeautifulSoup</li><li>Pandas</li>
-                </ul>
-              </div>
-            </article>
-
-            <!-- 12. Online Shopping Analytics -->
-            <article class="card anim" data-anim="flip-up" style="--i:2" data-category="data">
-              <div class="card-accent" style="--accent: var(--green)"></div>
-              <div class="card-body">
-                <div class="card-header">
-                  <span class="badge" style="--badge-color: var(--green)">Data Analysis</span>
-                </div>
-                <h3>Online Shopping Analytics</h3>
-                <p>End-to-end customer segmentation on a 1,000-row dataset — analyzing revenue, payment methods, ratings, and category-level purchasing trends.</p>
-                <ul class="tech-stack">
-                  <li>Python</li><li>JSON</li><li>Matplotlib</li>
-                </ul>
-              </div>
-            </article>
-
-            <!-- 13. Mars Multi-Source Data -->
-            <article class="card anim" data-anim="slide-left" style="--i:0" data-category="data">
-              <div class="card-accent" style="--accent: var(--green)"></div>
-              <div class="card-body">
-                <div class="card-header">
-                  <span class="badge" style="--badge-color: var(--green)">Data Integration</span>
-                </div>
-                <h3>Mars Multi-Source Data</h3>
-                <p>Practice lab integrating heterogeneous data formats (CSV, TSV, JSON, SQLite, HTML tables) into a unified relational analysis pipeline.</p>
-                <ul class="tech-stack">
-                  <li>Pandas</li><li>SQLite</li><li>HTML Tables</li>
-                </ul>
-              </div>
-            </article>
-
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- ─── TECH STACK ─── -->
+      <!-- ─── TECH STACK SECTION ─── -->
       <section id="stack" class="stack-section">
         <div class="container">
-          <div class="section-tag anim" data-anim="blur-up"><span class="tag-num">03</span> Tech Stack</div>
-          <h2 class="anim" data-anim="slide-left">Technologies I work with.</h2>
-          <p class="section-desc anim" data-anim="blur-up">Only technologies confirmed in real project source code.</p>
-          <div class="stack-grid">
-            <div class="stack-group anim" data-anim="flip-up" style="--i:0">
-              <h4>Languages</h4>
-              <ul><li>Python</li><li>JavaScript</li><li>TypeScript</li><li>SQL</li><li>HTML/CSS</li><li>C++ (Arduino)</li></ul>
+          <div class="section-header">
+            <div class="section-tag-pill">
+              <span class="tag-dot"></span>
+              <span>VERIFIED TOOLKIT</span>
             </div>
-            <div class="stack-group anim" data-anim="flip-up" style="--i:1">
-              <h4>Frameworks</h4>
-              <ul><li>React</li><li>Express</li><li>Flask</li><li>Tailwind CSS</li><li>Vite</li></ul>
+            <h2 class="section-title">Technologies & Stack</h2>
+            <p class="section-subtitle">Only technologies actively utilized in my source code, notebooks, and hardware setups.</p>
+          </div>
+
+          <div class="stack-bento">
+            <div class="stack-card">
+              <div class="stack-card-icon" style="background: rgba(56, 189, 248, 0.15); color: var(--blue);">⚡</div>
+              <h3>Languages</h3>
+              <div class="tags-cluster">
+                <span>Python</span><span>JavaScript (ES6+)</span><span>TypeScript</span><span>SQL</span><span>C++ (Arduino)</span><span>HTML5</span><span>CSS3</span>
+              </div>
             </div>
-            <div class="stack-group anim" data-anim="flip-up" style="--i:2">
-              <h4>Data & AI</h4>
-              <ul><li>Pandas</li><li>NumPy</li><li>Matplotlib</li><li>Seaborn</li><li>TensorFlow</li><li>SQLite</li></ul>
+            <div class="stack-card">
+              <div class="stack-card-icon" style="background: rgba(52, 211, 153, 0.15); color: var(--green);">📊</div>
+              <h3>Data & AI</h3>
+              <div class="tags-cluster">
+                <span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span><span>TensorFlow / Keras</span><span>SQLite3</span><span>BeautifulSoup4</span>
+              </div>
             </div>
-            <div class="stack-group anim" data-anim="flip-up" style="--i:3">
-              <h4>Tools</h4>
-              <ul><li>Git & GitHub</li><li>PostgreSQL</li><li>Supabase</li><li>Playwright</li><li>Node.js</li></ul>
+            <div class="stack-card">
+              <div class="stack-card-icon" style="background: rgba(167, 139, 250, 0.15); color: var(--purple);">🛠️</div>
+              <h3>Frameworks & Web</h3>
+              <div class="tags-cluster">
+                <span>React</span><span>Express.js</span><span>Flask</span><span>Tailwind CSS</span><span>PostgreSQL</span><span>Supabase</span><span>Vite</span>
+              </div>
+            </div>
+            <div class="stack-card">
+              <div class="stack-card-icon" style="background: rgba(251, 146, 60, 0.15); color: var(--orange);">🎨</div>
+              <h3>Design & Systems</h3>
+              <div class="tags-cluster">
+                <span>Photoshop</span><span>Illustrator</span><span>Canva</span><span>Playwright E2E</span><span>Git & GitHub</span><span>Web Audio API</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ─── CONTACT ─── -->
-      <section class="contact">
-        <div class="container anim" data-anim="zoom-blur">
-          <p class="hero-eyebrow"><span class="dot"></span> Always building</p>
-          <h2>Let's connect.</h2>
-          <p class="section-desc">Follow the experiments, projects, and what comes next on GitHub.</p>
-          <a class="btn btn-primary" href="https://github.com/AdamAtrons5911" target="_blank" rel="noreferrer">Visit GitHub <span aria-hidden="true">↗</span></a>
+      <!-- ─── CONTACT CALL TO ACTION ─── -->
+      <section class="contact-section">
+        <div class="container">
+          <div class="contact-banner">
+            <div class="contact-text">
+              <div class="hero-status-pill">
+                <span class="live-pulse"></span>
+                <span>Let's collaborate</span>
+              </div>
+              <h2>Have an idea or want to build something impactful?</h2>
+              <p>I'm always open to discussing new projects, research ideas, or engineering opportunities.</p>
+              <div class="contact-links-grid">
+                <a href="mailto:adamabdala630@gmail.com" class="c-link">
+                  <span class="c-icon">📧</span>
+                  <div>
+                    <small>Email</small>
+                    <strong>adamabdala630@gmail.com</strong>
+                  </div>
+                </a>
+                <a href="https://github.com/AdamAtrons5911" target="_blank" rel="noreferrer" class="c-link">
+                  <span class="c-icon">📁</span>
+                  <div>
+                    <small>GitHub</small>
+                    <strong>@AdamAtrons5911</strong>
+                  </div>
+                </a>
+                <div class="c-link">
+                  <span class="c-icon">📍</span>
+                  <div>
+                    <small>Location</small>
+                    <strong>Aswan / Cairo, Egypt</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contact-action-box">
+              <a class="btn btn-primary btn-big" href="https://github.com/AdamAtrons5911" target="_blank" rel="noreferrer">
+                <span>Visit My GitHub Profile</span>
+                <span class="arrow-out">↗</span>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
+    <!-- ─── FOOTER ─── -->
     <footer class="footer">
-      <div class="container footer-inner">
-        <a class="logo" href="#top">
-          <span class="logo-mark">A</span>
-          <span class="logo-text">Adam</span>
-          <span class="logo-ar" lang="ar" dir="rtl">آدم</span>
-        </a>
-        <p>Software · Data · AI · Design</p>
-        <p>© <span id="year"></span> Adam</p>
+      <div class="container footer-content">
+        <div class="footer-left">
+          <a class="logo" href="#top">
+            <div class="logo-box"><span class="logo-letter">A</span></div>
+            <span class="logo-name">Adam</span>
+            <span class="logo-ar" lang="ar" dir="rtl">آدم</span>
+          </a>
+          <p class="footer-tagline">Curious builder crafting working systems across software, data, AI, and hardware.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#projects">Projects</a>
+          <a href="#about">About</a>
+          <a href="#stack">Stack</a>
+          <a href="https://github.com/AdamAtrons5911" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+        <div class="footer-bottom">
+          <p>© <span id="year"></span> Adam Abdullah. Built with evidence & code.</p>
+        </div>
       </div>
     </footer>
 
