@@ -1,0 +1,8 @@
+{
+  "name": "adam-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "check": "node --check main.js"
+  }
+}
