@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Adam — 15yo student builder, developer & researcher from Egypt. Software systems, Data science, AI/IoT prototypes & Design." />
+    <meta name="description" content="Adam Abdullah — 15yo student builder, researcher & leader from Egypt. 3x ISEF Participant, Dawwie Camp President (400+ students), Software Systems & Data Science." />
     <meta name="theme-color" content="#09090b" />
-    <meta property="og:title" content="Adam — Builder · Developer · Systems" />
-    <meta property="og:description" content="Explore real projects, live applications, data pipelines, and research by Adam." />
+    <meta property="og:title" content="Adam Abdullah — Born to Lead · Systems Builder" />
+    <meta property="og:description" content="Explore real projects, certified credentials, leadership milestones, and early memories by Adam." />
     <meta property="og:type" content="website" />
-    <title>Adam — Software · Data · AI · Robotics</title>
+    <title>Adam Abdullah — Born to Lead · Systems Builder</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&family=Cairo:wght@600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -27,6 +27,17 @@
     <div class="ambient-glow ambient-glow-1" aria-hidden="true"></div>
     <div class="ambient-glow ambient-glow-2" aria-hidden="true"></div>
 
+    <!-- Side Section Navigation Dots -->
+    <nav class="side-nav-dots" aria-label="Page Sections">
+      <a href="#top" class="dot-item active" data-tooltip="Home (المقدمة)"></a>
+      <a href="#projects" class="dot-item" data-tooltip="Projects (المشاريع)"></a>
+      <a href="#certificates" class="dot-item" data-tooltip="Certificates (الشهادات)"></a>
+      <a href="#memories" class="dot-item" data-tooltip="Memories (ذكرياتي وبداياتي)"></a>
+      <a href="#about" class="dot-item" data-tooltip="Story (القصة والقيادة)"></a>
+      <a href="#stack" class="dot-item" data-tooltip="Stack (المهارات)"></a>
+      <a href="#contact" class="dot-item" data-tooltip="Contact (تواصل)"></a>
+    </nav>
+
     <!-- ─── HEADER ─── -->
     <header class="header" id="header">
       <div class="container header-inner">
@@ -34,8 +45,8 @@
           <div class="logo-box">
             <span class="logo-letter">A</span>
           </div>
-          <span class="logo-name">Adam</span>
-          <span class="logo-ar" lang="ar" dir="rtl">آدم</span>
+          <span class="logo-name">Adam Abdullah</span>
+          <span class="logo-ar" lang="ar" dir="rtl">آدم عبد الله</span>
         </a>
 
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Toggle navigation">
@@ -44,8 +55,10 @@
 
         <nav id="nav" class="nav" aria-label="Main Navigation">
           <a href="#projects" class="nav-link"><span>01.</span> Projects</a>
-          <a href="#about" class="nav-link"><span>02.</span> About & Story</a>
-          <a href="#stack" class="nav-link"><span>03.</span> Tech Stack</a>
+          <a href="#certificates" class="nav-link"><span>02.</span> Certificates</a>
+          <a href="#memories" class="nav-link"><span>03.</span> Memories</a>
+          <a href="#about" class="nav-link"><span>04.</span> Story</a>
+          <a href="#stack" class="nav-link"><span>05.</span> Stack</a>
           <a href="https://github.com/AdamAtrons5911" target="_blank" rel="noreferrer" class="nav-github-btn">
             <svg class="gh-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
               <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
@@ -57,35 +70,39 @@
       </div>
     </header>
 
-    <main>
-      <!-- ─── HERO SECTION ─── -->
-      <section id="top" class="hero">
+    <main class="page-scroll-container">
+      <!-- ─── 01. HERO SECTION: BORN TO LEAD ─── -->
+      <section id="top" class="hero page-section">
         <div class="container hero-inner">
           <div class="hero-content">
             <div class="hero-status-pill">
-              <span class="live-pulse"></span>
-              <span>Available for collaborations & systems building</span>
+              <span class="crown-icon">👑</span>
+              <span>BORN TO LEAD · ليدر بالفطرة</span>
             </div>
 
             <h1 class="hero-title">
-              I build <span class="gradient-text">working systems</span> from scratch.
+              Leading since day one.<br />
+              Building <span class="gradient-text">working systems</span> for the future.
             </h1>
 
             <p class="hero-desc">
-              Hey, I'm <strong>Adam</strong> — 15-year-old student builder from Egypt. I explore the intersection of full-stack software, data analytics, AI anomaly detection, robotics, and creative gamification.
+              I'm <strong>Adam Abdullah</strong> — a 15-year-old student builder, researcher, and youth leader from Aswan & Cairo, Egypt. From leading <strong>400+ students</strong> at the Dawwie Summer Camp to competing <strong>3x at ISEF</strong>, I turn curiosity into working software, AI prototypes, and impactful leadership.
             </p>
 
             <div class="hero-cta-group">
               <a class="btn btn-primary" href="#projects">
-                <span>View My Work (15+ Projects)</span>
+                <span>Explore 15+ Projects</span>
                 <span class="btn-arrow">↓</span>
               </a>
-              <a class="btn btn-secondary" href="https://github.com/AdamAtrons5911" target="_blank" rel="noreferrer">
+              <a class="btn btn-secondary" href="#memories">
+                <span>📸 My Beginnings & Memories</span>
+                <span class="arrow-out">↗</span>
+              </a>
+              <a class="btn btn-ghost" href="https://github.com/AdamAtrons5911" target="_blank" rel="noreferrer">
                 <svg class="gh-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
                   <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
                 </svg>
-                <span>GitHub Repositories</span>
-                <span class="arrow-out">↗</span>
+                <span>GitHub</span>
               </a>
             </div>
 
@@ -95,63 +112,49 @@
                 <span class="metric-lbl">ISEF Participant</span>
               </div>
               <div class="metric-card">
-                <span class="metric-val">15+</span>
-                <span class="metric-lbl">Built Projects</span>
-              </div>
-              <div class="metric-card">
                 <span class="metric-val">400+</span>
                 <span class="metric-lbl">Students Led (Dawwie)</span>
               </div>
               <div class="metric-card">
+                <span class="metric-val">15+</span>
+                <span class="metric-lbl">Built Projects</span>
+              </div>
+              <div class="metric-card">
                 <span class="metric-val">DEBI</span>
-                <span class="metric-lbl">Graduate</span>
+                <span class="metric-lbl">Honors Graduate</span>
               </div>
             </div>
           </div>
 
-          <!-- Interactive 3D Orbit Node Map -->
-          <div class="hero-orbit-box" id="hero-orbit" aria-hidden="true">
-            <div class="orbit-center">
-              <div class="orbit-center-core">
-                <span>ADAM</span>
-                <small>BUILDER</small>
+          <!-- Cropped & Symmetrically Centered Leader Photo Frame -->
+          <div class="hero-leader-frame">
+            <div class="leader-image-card">
+              <div class="leader-img-wrapper">
+                <img src="assets/hero_leader.jpg" alt="Adam Abdullah - Born Leader in Center" class="leader-img" onerror="this.src='assets/avatar_galabeya.jpg'" />
               </div>
-              <div class="orbit-ring orbit-ring-1"></div>
-              <div class="orbit-ring orbit-ring-2"></div>
-              <div class="orbit-ring orbit-ring-3"></div>
-
-              <div class="floating-badge badge-software" data-speed="1.2">
-                <span class="badge-icon">⚡</span>
-                <span class="badge-txt">Software</span>
-              </div>
-              <div class="floating-badge badge-data" data-speed="1.8">
-                <span class="badge-icon">📊</span>
-                <span class="badge-txt">Data Science</span>
-              </div>
-              <div class="floating-badge badge-ai" data-speed="1.5">
-                <span class="badge-icon">🤖</span>
-                <span class="badge-txt">AI & IoT</span>
-              </div>
-              <div class="floating-badge badge-design" data-speed="2.0">
-                <span class="badge-icon">🎨</span>
-                <span class="badge-txt">Design</span>
+              <div class="leader-card-badge">
+                <span class="badge-dot"></span>
+                <div class="badge-text">
+                  <strong>Born Leader · قائد بالفطرة</strong>
+                  <small>Always at the center of the action</small>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ─── PROJECTS SECTION WITH VISUAL SCREENSHOTS ─── -->
-      <section id="projects" class="projects-section">
+      <!-- ─── 02. PROJECTS SHOWCASE SECTION ─── -->
+      <section id="projects" class="projects-section page-section">
         <div class="container">
           <div class="section-header">
             <div class="section-tag-pill">
               <span class="tag-dot"></span>
               <span>PORTFOLIO SHOWCASE</span>
             </div>
-            <h2 class="section-title">Projects & Live Work</h2>
+            <h2 class="section-title">Projects & Live Systems</h2>
             <p class="section-subtitle">
-              Every project below was engineered with real code, notebooks, or live deployments. Click live links or GitHub buttons to inspect the work.
+              Every project below was built from scratch with working code, data pipelines, or interactive deployments.
             </p>
           </div>
 
@@ -179,7 +182,7 @@
             </button>
           </div>
 
-          <!-- Projects Grid with Screenshots -->
+          <!-- Projects Grid with Real Images -->
           <div class="projects-bento-grid" id="projects-grid">
 
             <!-- 1. Tourist's Plan (With Live Image) -->
@@ -379,7 +382,6 @@
                 </ul>
                 <div class="p-links-row">
                   <a href="https://github.com/AdamAtrons5911" target="_blank" rel="noreferrer" class="p-btn p-btn-gh-full">
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
                     <span>View Model & Firmware Code</span>
                     <span class="arrow">↗</span>
                   </a>
@@ -645,14 +647,212 @@
         </div>
       </section>
 
-      <!-- ─── ABOUT & STORY SECTION ─── -->
-      <section id="about" class="about-section">
+      <!-- ─── 03. CERTIFICATES & HONORS SECTION (فولدر الشهادات) ─── -->
+      <section id="certificates" class="certs-section page-section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag-pill">
+              <span class="tag-dot"></span>
+              <span>VERIFIED CREDENTIALS · الشهادات المعتمدة</span>
+            </div>
+            <h2 class="section-title">Certifications & Training</h2>
+            <p class="section-subtitle">
+              Professional training programs, data science accreditations, and national honors earned across DEBI, CRA, Digitobia, and specialized tech tracks.
+            </p>
+          </div>
+
+          <div class="certs-grid">
+            <!-- 1. AI Overview (CRA) -->
+            <div class="cert-card">
+              <div class="cert-badge-top">🤖 CRA Training Program</div>
+              <h4>Basic Overview of AI</h4>
+              <p>Foundations of machine learning, neural architectures, AI ethics, and data pipelines.</p>
+              <div class="cert-meta"><span>Verified Certification</span><span>AI & ML Track</span></div>
+            </div>
+
+            <!-- 2. Data Management and Analysis (CRA) -->
+            <div class="cert-card">
+              <div class="cert-badge-top">📊 CRA Training Program</div>
+              <h4>Data Management & Analytics</h4>
+              <p>Relational schema design, data manipulation, statistical EDA, and business metrics.</p>
+              <div class="cert-meta"><span>Verified Certification</span><span>Data Science Track</span></div>
+            </div>
+
+            <!-- 3. Cloud Computing Basics (CRA) -->
+            <div class="cert-card">
+              <div class="cert-badge-top">☁️ CRA Training Program</div>
+              <h4>Cloud Concepts & Development</h4>
+              <p>Cloud infrastructure models, scalable architecture concepts, storage, and deployment.</p>
+              <div class="cert-meta"><span>Verified Certification</span><span>Cloud Track</span></div>
+            </div>
+
+            <!-- 4. Information Representation & Data Organization -->
+            <div class="cert-card">
+              <div class="cert-badge-top">🗄️ Information Science</div>
+              <h4>Data Representation & Organization</h4>
+              <p>Data modeling, normalization, structured indexing, and database optimization.</p>
+              <div class="cert-meta"><span>Verified Certification</span><span>Database Systems</span></div>
+            </div>
+
+            <!-- 5. Python Programming Basics -->
+            <div class="cert-card">
+              <div class="cert-badge-top">🐍 Python Engineering</div>
+              <h4>Python Programming Basics</h4>
+              <p>Core algorithmic thinking, OOP, data structures, and scripting fundamentals.</p>
+              <div class="cert-meta"><span>Verified Certification</span><span>Programming Track</span></div>
+            </div>
+
+            <!-- 6. DEBI Level 1 & Level 2 (أشبال مصر الرقمية) -->
+            <div class="cert-card cert-featured-card">
+              <div class="cert-badge-top gold-badge">🇪🇬 مبادرة أشبال مصر الرقمية</div>
+              <h4>DEBI Level 1 & Level 2 Graduate</h4>
+              <p>Ministry of Communications and Information Technology (MCIT) honors program in Software Engineering, Data Science, and Leadership.</p>
+              <div class="cert-meta"><span class="gold-text">National Honors Track</span><span>Levels 1 & 2 Completed</span></div>
+            </div>
+
+            <!-- 7. Digitobia Certification -->
+            <div class="cert-card">
+              <div class="cert-badge-top">🌐 Digitobia Academy</div>
+              <h4>Digitobia Technology Certificate</h4>
+              <p>Advanced digital competencies, digital maturity assessment, and emerging tech frameworks.</p>
+              <div class="cert-meta"><span>Verified Certification</span><span>Digital Innovation</span></div>
+            </div>
+
+            <!-- 8. Mekky Tech Course Certificate -->
+            <div class="cert-card">
+              <div class="cert-badge-top">💻 Mekky Tech Academy</div>
+              <h4>Technical Systems Course</h4>
+              <p>Applied technical projects, hands-on programming challenges, and architectural workflows.</p>
+              <div class="cert-meta"><span>Verified Certification</span><span>Applied Tech</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── 04. MEMORIES & EARLY BEGINNINGS (فولدر ميموريز) ─── -->
+      <section id="memories" class="memories-section page-section">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-tag-pill">
+              <span class="tag-dot"></span>
+              <span>EARLY DAYS · ذكرياتي وبداياتي في التكنولوجيا</span>
+            </div>
+            <h2 class="section-title">Memories from the Journey</h2>
+            <p class="section-subtitle">
+              Moments that shaped my growth — from attending my very first Google tech summit, to teaching my little sister coding at age 11, to competing across national stages.
+            </p>
+          </div>
+
+          <div class="memories-grid">
+
+            <!-- Memory 1: Google Event -->
+            <article class="memory-card">
+              <div class="memory-img-box">
+                <img src="assets/memories/اول افينت احضره لجوجل.jpeg" alt="اول افينت احضره لجوجل" class="memory-img" onerror="this.parentElement.innerHTML='<div class=\'mem-placeholder\'><span>🌐</span><small>Google Developer Event</small></div>'" />
+              </div>
+              <div class="memory-caption">
+                <span class="mem-tag">📍 البدايات الأولى</span>
+                <h4>أول إيفنت وتجمع تقني لجوجل</h4>
+                <p>أول مؤتمر تقني أحضره في حياتي لجوجل.. اليوم ده فتح عيني على عالم البرمجة وبناء المشاريع والمجتمعات التقنية.</p>
+              </div>
+            </article>
+
+            <!-- Memory 2: With Abdelrahman Emran -->
+            <article class="memory-card">
+              <article class="memory-img-box">
+                <img src="assets/memories/انا مع عبدالرحمن عمران.png" alt="مع المهندس عبدالرحمن عمران" class="memory-img" onerror="this.parentElement.innerHTML='<div class=\'mem-placeholder\'><span>🤝</span><small>Role Models in Tech</small></div>'" />
+              </article>
+              <div class="memory-caption">
+                <span class="mem-tag">🌟 قدوة وإلهام</span>
+                <h4>مع المهندس عبد الرحمن عمران</h4>
+                <p>لقاء ملهم مع المهندس عبد الرحمن عمران، ونقاشات عن الشغف البرمجي والابتكار العلمي وكيفية تطوير حلول واقعية تفيد المجتمع.</p>
+              </div>
+            </article>
+
+            <!-- Memory 3: National Reading Project -->
+            <article class="memory-card">
+              <div class="memory-img-box">
+                <img src="assets/memories/المشروع الوطنى للقراءة.jpeg" alt="المشروع الوطني للقراءة" class="memory-img" onerror="this.parentElement.innerHTML='<div class=\'mem-placeholder\'><span>📖</span><small>National Reading Project</small></div>'" />
+              </div>
+              <div class="memory-caption">
+                <span class="mem-tag">🏆 تصفيات الجمهورية</span>
+                <h4>المشروع الوطني للقراءة — العاصمة الإدارية</h4>
+                <p>تمثيل محافظة أسوان في التصفيات النهائية للمشروع الوطني للقراءة على مستوى الجمهورية والسفر للعاصمة الإدارية الجديدة.</p>
+              </div>
+            </article>
+
+            <!-- Memory 4: Arab Reading Challenge -->
+            <article class="memory-card">
+              <div class="memory-img-box">
+                <img src="assets/memories/من اولى المرات ليا ف تحدى القراءة العربى.png" alt="تحدي القراءة العربي" class="memory-img" onerror="this.parentElement.innerHTML='<div class=\'mem-placeholder\'><span>📚</span><small>Arab Reading Challenge</small></div>'" />
+              </div>
+              <div class="memory-caption">
+                <span class="mem-tag">🌍 مسابقات عربية</span>
+                <h4>من أولى المشاركات في تحدي القراءة العربي</h4>
+                <p>الوقوف على مسارح المسابقات الوطنية منذ الصغر، واكتساب مهارات الفصاحة والطلاقة والإلقاء والجرأة في الحديث أمام الجمهور.</p>
+              </div>
+            </article>
+
+            <!-- Memory 5: ISEF Science Fair -->
+            <article class="memory-card">
+              <div class="memory-img-box">
+                <img src="assets/memories/ايسف.png" alt="معرض ايسف للعلوم والهندسة" class="memory-img" onerror="this.parentElement.innerHTML='<div class=\'mem-placeholder\'><span>🔬</span><small>ISEF Science Fair</small></div>'" />
+              </div>
+              <div class="memory-caption">
+                <span class="mem-tag">🔬 بحث علمي وابتكار</span>
+                <h4>معرض أيسف للعلوم والهندسة (ISEF)</h4>
+                <p>مشاركتي في معارض أيسف للعلوم والهندسة، وعرض الابتكارات الطبية والأنظمة الذكية أمام لجان التحكيم والدكاترة المتخصصين.</p>
+              </div>
+            </article>
+
+            <!-- Memory 6: Teaching Scratch to little sister -->
+            <article class="memory-card">
+              <div class="memory-img-box">
+                <img src="assets/memories/sister_scratch.png" alt="تعليم أختي سكراتش في سن 11" class="memory-img" onerror="this.parentElement.innerHTML='<div class=\'mem-placeholder\'><span>💡</span><small>Teaching Sister Scratch @ 11yo</small></div>'" />
+              </div>
+              <div class="memory-caption">
+                <span class="mem-tag">👧 نقل المعرفة والشغف</span>
+                <h4>وأنا بعلّم أختي الصغيرة سكراتش في سن 11 سنة</h4>
+                <p>من سن 11 سنة كنت حابب أعلم وأشارك البرمجة مع أختي الصغيرة وأبسط المفاهيم المنطقية وألعاب السكراتش.</p>
+              </div>
+            </article>
+
+            <!-- Memory 7: FabLab KIMA Hackathon -->
+            <article class="memory-card">
+              <div class="memory-img-box">
+                <img src="assets/memories/fablab_hackathon.jpg" alt="هاكاثون فاب لاب كيما" class="memory-img" onerror="this.parentElement.innerHTML='<div class=\'mem-placeholder\'><span>🛠️</span><small>FabLab KIMA Hackathon</small></div>'" />
+              </div>
+              <div class="memory-caption">
+                <span class="mem-tag">⚙️ هاكاثونات وصناعة</span>
+                <h4>هاكاثون فاب لاب كيما (FabLab)</h4>
+                <p>العمل اليدوي في الهاكاثون، تقطيع الليزر، الدوائر الكهربائية، ودمج الهاردوير بالسيرفرات والأنظمة البرمجية.</p>
+              </div>
+            </article>
+
+            <!-- Memory 8: ISEF Preliminary Qualifier -->
+            <article class="memory-card">
+              <div class="memory-img-box">
+                <img src="assets/memories/isef_prelim_2025.jpg" alt="صعود من المعرض التمهيدى 2025 ISEF" class="memory-img" onerror="this.parentElement.innerHTML='<div class=\'mem-placeholder\'><span>🥇</span><small>ISEF 2025 Preliminary</small></div>'" />
+              </div>
+              <div class="memory-caption">
+                <span class="mem-tag">🚀 إنجاز وتميز</span>
+                <h4>صعود وتأهل المعرض التمهيدي ISEF 2025</h4>
+                <p>لحظة التأهل والصعود من المعرض التمهيدي لأيسف وسط تشجيع الزملاء والمشرفين لمشروع حماية اللقاحات بالذكاء الاصطناعي.</p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ─── 05. STORY & LEADERSHIP SECTION ─── -->
+      <section id="about" class="about-section page-section">
         <div class="container">
           <div class="about-flex-layout">
             <div class="about-left">
               <div class="section-tag-pill">
                 <span class="tag-dot"></span>
-                <span>BIOGRAPHY & LEADERSHIP</span>
+                <span>BIOGRAPHY & LEADERSHIP · القيادة والأثر</span>
               </div>
               <h2 class="about-heading">
                 Building systems.<br />
@@ -727,8 +927,8 @@
         </div>
       </section>
 
-      <!-- ─── TECH STACK SECTION ─── -->
-      <section id="stack" class="stack-section">
+      <!-- ─── 06. TECH STACK SECTION ─── -->
+      <section id="stack" class="stack-section page-section">
         <div class="container">
           <div class="section-header">
             <div class="section-tag-pill">
@@ -772,8 +972,8 @@
         </div>
       </section>
 
-      <!-- ─── CONTACT CALL TO ACTION ─── -->
-      <section class="contact-section">
+      <!-- ─── 07. CONTACT CALL TO ACTION ─── -->
+      <section id="contact" class="contact-section page-section">
         <div class="container">
           <div class="contact-banner">
             <div class="contact-text">
@@ -824,13 +1024,15 @@
         <div class="footer-left">
           <a class="logo" href="#top">
             <div class="logo-box"><span class="logo-letter">A</span></div>
-            <span class="logo-name">Adam</span>
-            <span class="logo-ar" lang="ar" dir="rtl">آدم</span>
+            <span class="logo-name">Adam Abdullah</span>
+            <span class="logo-ar" lang="ar" dir="rtl">آدم عبد الله</span>
           </a>
           <p class="footer-tagline">Curious builder crafting working systems across software, data, AI, and hardware.</p>
         </div>
         <div class="footer-links">
           <a href="#projects">Projects</a>
+          <a href="#certificates">Certificates</a>
+          <a href="#memories">Memories</a>
           <a href="#about">About</a>
           <a href="#stack">Stack</a>
           <a href="https://github.com/AdamAtrons5911" target="_blank" rel="noreferrer">GitHub</a>

@@ -1,10 +1,10 @@
 // ─── Current Year ───
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// ─── Top Scroll Progress Bar & Scroll Parallax ───
+// ─── Top Scroll Progress Bar & Active Section Highlight ───
 const progressBar = document.getElementById("scroll-progress");
-const orbitBox = document.getElementById("hero-orbit");
-const floatingBadges = document.querySelectorAll(".floating-badge");
+const sideDots = document.querySelectorAll(".side-nav-dots .dot-item");
+const sections = document.querySelectorAll(".page-section");
 
 window.addEventListener("scroll", () => {
   const scrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -15,15 +15,20 @@ window.addEventListener("scroll", () => {
     progressBar.style.width = `${scrollPercent}%`;
   }
 
-  // Subtle Parallax on Hero Orbit & Badges while scrolling
-  if (orbitBox && scrollTop < window.innerHeight) {
-    const shift = scrollTop * 0.15;
-    orbitBox.style.transform = `translateY(${shift}px)`;
-    floatingBadges.forEach((badge) => {
-      const speed = parseFloat(badge.dataset.speed || 1);
-      badge.style.transform = `translateY(${scrollTop * 0.08 * speed}px)`;
-    });
-  }
+  // Update Side Dot Indicators
+  let currentSectionId = "";
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 150;
+    const sectionHeight = section.offsetHeight;
+    if (scrollTop >= sectionTop && scrollTop < sectionTop + sectionHeight) {
+      currentSectionId = section.getAttribute("id");
+    }
+  });
+
+  sideDots.forEach((dot) => {
+    const href = dot.getAttribute("href").replace("#", "");
+    dot.classList.toggle("active", href === currentSectionId);
+  });
 }, { passive: true });
 
 // ─── Mouse Spotlight Glow ───
@@ -37,16 +42,16 @@ if (cursorGlow && window.matchMedia("(pointer: fine)").matches) {
 
 // ─── 3D Card Tilt on Hover ───
 if (window.matchMedia("(pointer: fine)").matches) {
-  const cards = document.querySelectorAll(".tilt-card");
-  cards.forEach((card) => {
+  const tiltCards = document.querySelectorAll(".tilt-card, .leader-image-card, .memory-card, .cert-card");
+  tiltCards.forEach((card) => {
     card.addEventListener("mousemove", (e) => {
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
-      const rotateX = ((y - centerY) / centerY) * -6;
-      const rotateY = ((x - centerX) / centerX) * 6;
+      const rotateX = ((y - centerY) / centerY) * -5;
+      const rotateY = ((x - centerX) / centerX) * 5;
 
       card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
     });
@@ -90,7 +95,7 @@ if (menuToggle && navMenu) {
   });
 }
 
-// ─── Smooth Scroll with Offset for Fixed Header ───
+// ─── Smooth Section-to-Section Scroll ───
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     const targetId = this.getAttribute("href");
@@ -98,7 +103,7 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     const targetElement = document.querySelector(targetId);
     if (targetElement) {
       e.preventDefault();
-      const headerOffset = 80;
+      const headerOffset = 70;
       const elementPosition = targetElement.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
