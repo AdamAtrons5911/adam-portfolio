@@ -20,7 +20,7 @@
 - 👑 **President of "Dawwie" (دوي) Summer Camp 2024** — Led, organized, and mentored **400+ students** across diverse teams.
 - 🔬 **3x ISEF Science & Engineering Fair Participant** — Researching biomedical vaccine thermal hydrogels and IoT/AI anomaly detection.
 - 📖 **National Reading Project Finalist** — Represented Aswan Governorate at the New Administrative Capital.
-- 🇪🇬 **DEBI (Digital Egypt Cubs Initiative) Graduate** — Top honors in Software Engineering and Data Science.
+- 🇪🇬 **DECI (Digital Egypt Cubs Initiative) Graduate** — Top honors in Software Engineering and Data Science.
 
 ---
 

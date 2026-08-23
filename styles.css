@@ -433,7 +433,7 @@ img { display: block; max-width: 100%; }
 /* ─── CROPPED SYMMETRICAL LEADER PHOTO FRAME ─── */
 .hero-leader-frame {
   width: 100%;
-  max-width: 440px;
+  max-width: 400px;
   position: relative;
   justify-self: center;
 }
@@ -455,23 +455,25 @@ img { display: block; max-width: 100%; }
 
 .leader-img-wrapper {
   width: 100%;
-  height: 480px;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
   position: relative;
   background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Symmetrical center crop of Adam in red jacket / tiger mask */
+/* Symmetrical center crop of Adam in red jacket */
 .leader-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 25%;
-  transform: scale(1.04);
+  object-position: center center;
   transition: transform 0.6s var(--spring);
 }
 .leader-image-card:hover .leader-img {
-  transform: scale(1.08);
+  transform: scale(1.04);
 }
 
 .leader-card-badge {
