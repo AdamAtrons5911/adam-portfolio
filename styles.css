@@ -430,10 +430,10 @@ img { display: block; max-width: 100%; }
   letter-spacing: 0.05em;
 }
 
-/* ─── CROPPED SYMMETRICAL LEADER PHOTO FRAME ─── */
+/* ─── NATURAL SYMMETRICAL HERO PHOTO FRAME ─── */
 .hero-leader-frame {
   width: 100%;
-  max-width: 400px;
+  max-width: 380px;
   position: relative;
   justify-self: center;
 }
@@ -446,6 +446,8 @@ img { display: block; max-width: 100%; }
   border: 1px solid rgba(250, 204, 21, 0.3);
   box-shadow: 0 30px 80px rgba(0,0,0,0.7), 0 0 40px rgba(250, 204, 21, 0.15);
   transition: transform 0.4s var(--spring), box-shadow 0.4s;
+  display: flex;
+  flex-direction: column;
 }
 .leader-image-card:hover {
   transform: translateY(-8px) scale(1.02);
@@ -455,37 +457,27 @@ img { display: block; max-width: 100%; }
 
 .leader-img-wrapper {
   width: 100%;
-  aspect-ratio: 3 / 4;
-  overflow: hidden;
   position: relative;
-  background: #111;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: #0d0d12;
+  overflow: hidden;
 }
 
-/* Symmetrical center crop of Adam in red jacket */
+/* Full natural image scaling proportionally from all sides */
 .leader-img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
+  height: auto;
+  display: block;
+  object-fit: contain;
   transition: transform 0.6s var(--spring);
 }
 .leader-image-card:hover .leader-img {
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
 
 .leader-card-badge {
-  position: absolute;
-  bottom: 16px;
-  left: 16px;
-  right: 16px;
   padding: 0.85rem 1.1rem;
-  background: rgba(9, 9, 12, 0.88);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(250, 204, 21, 0.3);
-  border-radius: var(--radius-md);
+  background: rgba(9, 9, 12, 0.95);
+  border-top: 1px solid rgba(250, 204, 21, 0.2);
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -499,13 +491,14 @@ img { display: block; max-width: 100%; }
 }
 .badge-text strong {
   display: block;
-  font-family: var(--font-arabic);
-  font-size: 0.95rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 700;
   color: #fff;
 }
 .badge-text small {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   color: var(--text-muted);
 }
 
