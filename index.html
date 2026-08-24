@@ -16,26 +16,6 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- 💡 Top Advisory & Language Recommendation Banner -->
-    <div id="vibe-banner" class="vibe-banner" role="region" aria-label="Reading vibe recommendation">
-      <div class="container banner-inner">
-        <div class="banner-text-wrap">
-          <span class="banner-text" data-i18n="banner.tip">
-            💡 <strong>Pro Tip:</strong> Select your preferred reading style & language before browsing.
-          </span>
-        </div>
-        <div class="banner-controls">
-          <div class="lang-switcher-pills">
-            <button type="button" class="lang-opt-btn active" data-lang="en-formal" title="Formal English">🇬🇧 Formal</button>
-            <button type="button" class="lang-opt-btn" data-lang="en-banter" title="Gen-Z / Banter English">😎 Banter</button>
-            <button type="button" class="lang-opt-btn" data-lang="ar-formal" title="العربية الفصحى">🇪🇬 فصحى</button>
-            <button type="button" class="lang-opt-btn" data-lang="ar-slang" title="عامية مصرية روقان">🔥 مصري</button>
-          </div>
-          <button type="button" id="dismiss-banner" class="banner-dismiss-btn" data-i18n="banner.dismiss">Got it ✕</button>
-        </div>
-      </div>
-    </div>
-
     <!-- Top Scroll Progress Bar -->
     <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
 
@@ -66,33 +46,24 @@
             <span class="logo-letter">A</span>
           </div>
           <span class="logo-name">Adam Abdullah</span>
-          <span class="logo-tag" data-i18n="header.role">Builder · Developer</span>
+          <span class="logo-tag">Builder · Developer</span>
         </a>
-
-        <div class="header-center-lang">
-          <div class="lang-switcher-pills compact">
-            <button type="button" class="lang-opt-btn active" data-lang="en-formal" title="Formal English">🇬🇧 Formal</button>
-            <button type="button" class="lang-opt-btn" data-lang="en-banter" title="Gen-Z / Banter English">😎 Banter</button>
-            <button type="button" class="lang-opt-btn" data-lang="ar-formal" title="العربية الفصحى">🇪🇬 فصحى</button>
-            <button type="button" class="lang-opt-btn" data-lang="ar-slang" title="عامية مصرية روقان">🔥 مصري</button>
-          </div>
-        </div>
 
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Toggle navigation">
           <span class="bar"></span><span class="bar"></span>
         </button>
 
         <nav id="nav" class="nav" aria-label="Main Navigation">
-          <a href="#projects" class="nav-link" data-i18n="nav.projects"><span>01.</span> Projects</a>
-          <a href="#certificates" class="nav-link" data-i18n="nav.certificates"><span>02.</span> Certificates</a>
-          <a href="#memories" class="nav-link" data-i18n="nav.memories"><span>03.</span> Memories</a>
-          <a href="#about" class="nav-link" data-i18n="nav.story"><span>04.</span> Story</a>
-          <a href="#stack" class="nav-link" data-i18n="nav.stack"><span>05.</span> Stack</a>
+          <a href="#projects" class="nav-link"><span>01.</span> Projects</a>
+          <a href="#certificates" class="nav-link"><span>02.</span> Certificates</a>
+          <a href="#memories" class="nav-link"><span>03.</span> Memories</a>
+          <a href="#about" class="nav-link"><span>04.</span> Story</a>
+          <a href="#stack" class="nav-link"><span>05.</span> Stack</a>
           <a href="https://github.com/AdamAtrons5911" target="_blank" rel="noreferrer" class="nav-github-btn">
             <svg class="gh-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
               <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
             </svg>
-            <span data-i18n="nav.github">GitHub Profile</span>
+            GitHub Profile
             <span class="arrow-out">↗</span>
           </a>
         </nav>
