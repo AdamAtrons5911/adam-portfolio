@@ -16,6 +16,26 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- 💡 Top Advisory & Language Recommendation Banner -->
+    <div id="vibe-banner" class="vibe-banner" role="region" aria-label="Reading vibe recommendation">
+      <div class="container banner-inner">
+        <div class="banner-text-wrap">
+          <span class="banner-text" data-i18n="banner.tip">
+            💡 <strong>Pro Tip:</strong> Select your preferred reading style & language before browsing.
+          </span>
+        </div>
+        <div class="banner-controls">
+          <div class="lang-switcher-pills">
+            <button type="button" class="lang-opt-btn active" data-lang="en-formal" title="Formal English">🇬🇧 Formal</button>
+            <button type="button" class="lang-opt-btn" data-lang="en-banter" title="Gen-Z / Banter English">😎 Banter</button>
+            <button type="button" class="lang-opt-btn" data-lang="ar-formal" title="العربية الفصحى">🇪🇬 فصحى</button>
+            <button type="button" class="lang-opt-btn" data-lang="ar-slang" title="عامية مصرية روقان">🔥 مصري</button>
+          </div>
+          <button type="button" id="dismiss-banner" class="banner-dismiss-btn" data-i18n="banner.dismiss">Got it ✕</button>
+        </div>
+      </div>
+    </div>
+
     <!-- Top Scroll Progress Bar -->
     <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
 
@@ -46,24 +66,33 @@
             <span class="logo-letter">A</span>
           </div>
           <span class="logo-name">Adam Abdullah</span>
-          <span class="logo-tag">Builder · Developer</span>
+          <span class="logo-tag" data-i18n="header.role">Builder · Developer</span>
         </a>
+
+        <div class="header-center-lang">
+          <div class="lang-switcher-pills compact">
+            <button type="button" class="lang-opt-btn active" data-lang="en-formal" title="Formal English">🇬🇧 Formal</button>
+            <button type="button" class="lang-opt-btn" data-lang="en-banter" title="Gen-Z / Banter English">😎 Banter</button>
+            <button type="button" class="lang-opt-btn" data-lang="ar-formal" title="العربية الفصحى">🇪🇬 فصحى</button>
+            <button type="button" class="lang-opt-btn" data-lang="ar-slang" title="عامية مصرية روقان">🔥 مصري</button>
+          </div>
+        </div>
 
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Toggle navigation">
           <span class="bar"></span><span class="bar"></span>
         </button>
 
         <nav id="nav" class="nav" aria-label="Main Navigation">
-          <a href="#projects" class="nav-link"><span>01.</span> Projects</a>
-          <a href="#certificates" class="nav-link"><span>02.</span> Certificates</a>
-          <a href="#memories" class="nav-link"><span>03.</span> Memories</a>
-          <a href="#about" class="nav-link"><span>04.</span> Story</a>
-          <a href="#stack" class="nav-link"><span>05.</span> Stack</a>
+          <a href="#projects" class="nav-link" data-i18n="nav.projects"><span>01.</span> Projects</a>
+          <a href="#certificates" class="nav-link" data-i18n="nav.certificates"><span>02.</span> Certificates</a>
+          <a href="#memories" class="nav-link" data-i18n="nav.memories"><span>03.</span> Memories</a>
+          <a href="#about" class="nav-link" data-i18n="nav.story"><span>04.</span> Story</a>
+          <a href="#stack" class="nav-link" data-i18n="nav.stack"><span>05.</span> Stack</a>
           <a href="https://github.com/AdamAtrons5911" target="_blank" rel="noreferrer" class="nav-github-btn">
             <svg class="gh-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
               <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
             </svg>
-            GitHub Profile
+            <span data-i18n="nav.github">GitHub Profile</span>
             <span class="arrow-out">↗</span>
           </a>
         </nav>
@@ -77,50 +106,50 @@
           <div class="hero-content">
             <div class="hero-status-pill">
               <span class="live-pulse"></span>
-              <span>PASSIONATE SYSTEMS BUILDER · ASWAN, EGYPT</span>
+              <span data-i18n="hero.pill">PASSIONATE SYSTEMS BUILDER · ASWAN, EGYPT</span>
             </div>
 
-            <h1 class="hero-title">
+            <h1 class="hero-title" data-i18n="hero.title">
               I build <span class="gradient-text">working systems</span> from the ground up.
             </h1>
 
-            <p class="hero-desc">
+            <p class="hero-desc" data-i18n="hero.desc">
               Hey, I'm <strong>Adam Abdullah</strong> — a 15-year-old student builder and developer from <strong>Aswan, Egypt</strong>. Deeply passionate about software architecture, data pipelines, AI prototypes, and robotics. I learn by shipping real code, exploring new technologies, and building meaningful systems.
             </p>
 
             <div class="hero-cta-group">
               <a class="btn btn-primary" href="#projects">
-                <span>Explore 15+ Projects</span>
+                <span data-i18n="hero.btn.projects">Explore 15+ Projects</span>
                 <span class="btn-arrow">↓</span>
               </a>
               <a class="btn btn-secondary" href="#memories">
-                <span>📸 My Beginnings & Memories</span>
+                <span data-i18n="hero.btn.memories">📸 My Beginnings & Memories</span>
                 <span class="arrow-out">↗</span>
               </a>
               <a class="btn btn-ghost" href="https://github.com/AdamAtrons5911" target="_blank" rel="noreferrer">
                 <svg class="gh-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
                   <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
                 </svg>
-                <span>GitHub</span>
+                <span data-i18n="hero.btn.github">GitHub</span>
               </a>
             </div>
 
             <div class="hero-metrics">
               <div class="metric-card">
                 <span class="metric-val">3x</span>
-                <span class="metric-lbl">ISEF Participant</span>
+                <span class="metric-lbl" data-i18n="hero.metric.isef">ISEF Participant</span>
               </div>
               <div class="metric-card">
                 <span class="metric-val">400+</span>
-                <span class="metric-lbl">Students Led (Dawwie)</span>
+                <span class="metric-lbl" data-i18n="hero.metric.camp">Students Led (Dawwie)</span>
               </div>
               <div class="metric-card">
                 <span class="metric-val">15+</span>
-                <span class="metric-lbl">Built Projects</span>
+                <span class="metric-lbl" data-i18n="hero.metric.projects">Built Projects</span>
               </div>
               <div class="metric-card">
                 <span class="metric-val">DECI</span>
-                <span class="metric-lbl">Honors Graduate</span>
+                <span class="metric-lbl" data-i18n="hero.metric.deci">Honors Graduate</span>
               </div>
             </div>
           </div>
@@ -134,8 +163,8 @@
               <div class="leader-card-badge">
                 <span class="badge-dot"></span>
                 <div class="badge-text">
-                  <strong>Born to be a Leader 👑</strong>
-                  <small>Adam Abdullah · Always at the center of the action</small>
+                  <strong data-i18n="hero.photo.badge.title">Born to be a Leader 👑</strong>
+                  <small data-i18n="hero.photo.badge.sub">Adam Abdullah · Always at the center of the action</small>
                 </div>
               </div>
             </div>
@@ -149,34 +178,34 @@
           <div class="section-header">
             <div class="section-tag-pill">
               <span class="tag-dot"></span>
-              <span>PORTFOLIO SHOWCASE</span>
+              <span data-i18n="projects.tag">VERIFIED PORTFOLIO · REAL REPOSITORIES</span>
             </div>
-            <h2 class="section-title">Projects & Live Systems</h2>
-            <p class="section-subtitle">
-              Every project below was built from scratch with working code, data pipelines, or interactive deployments.
+            <h2 class="section-title" data-i18n="projects.title">Featured Engineering Works</h2>
+            <p class="section-subtitle" data-i18n="projects.subtitle">
+              Every project listed here is backed by working code, repository history, live deployments, or research decks.
             </p>
           </div>
 
           <!-- Category Filters -->
           <div class="project-filter-tabs" role="toolbar" aria-label="Filter Projects">
             <button class="filter-tab active" data-filter="all" type="button">
-              <span>All Projects</span>
+              <span data-i18n="filter.all">All Builds</span>
               <span class="count">15</span>
             </button>
             <button class="filter-tab" data-filter="apps" type="button">
-              <span>💻 Software & Web</span>
+              <span data-i18n="filter.apps">Software & Web</span>
               <span class="count">4</span>
             </button>
             <button class="filter-tab" data-filter="ai-science" type="button">
-              <span>🔬 AI, IoT & Science</span>
+              <span data-i18n="filter.ai">AI, IoT & Science</span>
               <span class="count">3</span>
             </button>
             <button class="filter-tab" data-filter="data" type="button">
-              <span>📈 Data Analytics</span>
+              <span data-i18n="filter.data">Data Analytics</span>
               <span class="count">5</span>
             </button>
             <button class="filter-tab" data-filter="creative" type="button">
-              <span>🎮 Creative & Design</span>
+              <span data-i18n="filter.creative">Creative & Design</span>
               <span class="count">3</span>
             </button>
           </div>
@@ -652,11 +681,11 @@
           <div class="section-header">
             <div class="section-tag-pill">
               <span class="tag-dot"></span>
-              <span>VERIFIED CREDENTIALS · الشهادات المعتمدة</span>
+              <span data-i18n="certs.tag">VERIFIED CREDENTIALS · CERTIFICATIONS</span>
             </div>
-            <h2 class="section-title">Certifications & Training</h2>
-            <p class="section-subtitle">
-              Professional training programs, data science accreditations, and national honors earned across DEBI, CRA, Digitobia, and specialized tech tracks.
+            <h2 class="section-title" data-i18n="certs.title">Certified Technical Milestones</h2>
+            <p class="section-subtitle" data-i18n="certs.subtitle">
+              Official credentials from the Ministry of Communications, CRA programs, Digitobia, and specialized academies.
             </p>
           </div>
 
@@ -801,28 +830,16 @@
               </a>
               <div class="cert-body">
                 <div class="cert-badge-top">💻 Mekky Tech Academy</div>
-                <h4>Technical Systems Course</h4>
-                <p>Applied technical projects, hands-on programming challenges, and architectural workflows.</p>
-                <div class="cert-meta">
-                  <span>Applied Tech Track</span>
-                  <a href="assets/certificates/شهادة كورس مكى.pdf" target="_blank" rel="noreferrer" class="cert-action-link">Open PDF ↗</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ─── 04. MEMORIES & EARLY BEGINNINGS ─── -->
+                <!-- ─── 04. MEMORIES & EARLY BEGINNINGS ─── -->
       <section id="memories" class="memories-section page-section">
         <div class="container">
           <div class="section-header">
             <div class="section-tag-pill">
               <span class="tag-dot"></span>
-              <span>EARLY DAYS · MEMORIES & ORIGINS</span>
+              <span data-i18n="memories.tag">EARLY DAYS · MEMORIES & ORIGINS</span>
             </div>
-            <h2 class="section-title">Memories from the Journey</h2>
-            <p class="section-subtitle">
+            <h2 class="section-title" data-i18n="memories.title">Memories from the Journey</h2>
+            <p class="section-subtitle" data-i18n="memories.subtitle">
               Moments that shaped my growth — from attending my very first Google tech summit, to teaching my little sister coding at age 11, to competing across national stages.
             </p>
           </div>
@@ -936,9 +953,9 @@
             <div class="about-left">
               <div class="section-tag-pill">
                 <span class="tag-dot"></span>
-                <span>BIOGRAPHY & LEADERSHIP · IMPACT</span>
+                <span data-i18n="story.tag">BIOGRAPHY & LEADERSHIP · IMPACT</span>
               </div>
-              <h2 class="about-heading">
+              <h2 class="about-heading" data-i18n="story.title">
                 Building systems.<br />
                 Leading teams.<br />
                 <span class="gradient-text">Never stopping.</span>
@@ -1063,10 +1080,10 @@
             <div class="contact-text">
               <div class="hero-status-pill">
                 <span class="live-pulse"></span>
-                <span>Let's collaborate</span>
+                <span data-i18n="contact.pill">LET'S COLLABORATE</span>
               </div>
-              <h2>Have an idea or want to build something impactful?</h2>
-              <p>I'm always open to discussing new projects, research ideas, or engineering opportunities.</p>
+              <h2 data-i18n="contact.title">Have an idea or want to build something impactful?</h2>
+              <p data-i18n="contact.desc">I'm always open to discussing new projects, research ideas, or engineering opportunities.</p>
               <div class="contact-links-grid">
                 <a href="mailto:adamabdala630@gmail.com" class="c-link">
                   <span class="c-icon">📧</span>
@@ -1074,7 +1091,7 @@
                     <small>Email</small>
                     <strong>adamabdala630@gmail.com</strong>
                   </div>
-                </a>
+                </div>
                 <a href="https://github.com/AdamAtrons5911" target="_blank" rel="noreferrer" class="c-link">
                   <span class="c-icon">📁</span>
                   <div>
@@ -1093,7 +1110,7 @@
             </div>
             <div class="contact-action-box">
               <a class="btn btn-primary btn-big" href="https://github.com/AdamAtrons5911" target="_blank" rel="noreferrer">
-                <span>Visit My GitHub Profile</span>
+                <span data-i18n="contact.btn">Visit My GitHub Profile</span>
                 <span class="arrow-out">↗</span>
               </a>
             </div>
@@ -1109,17 +1126,17 @@
           <a class="logo" href="#top">
             <div class="logo-box"><span class="logo-letter">A</span></div>
             <span class="logo-name">Adam Abdullah</span>
-            <span class="logo-tag">Builder · Developer</span>
+            <span class="logo-tag" data-i18n="header.role">Builder · Developer</span>
           </a>
           <p class="footer-tagline">Curious builder crafting working systems across software, data, AI, and hardware.</p>
         </div>
         <div class="footer-links">
-          <a href="#projects">Projects</a>
-          <a href="#certificates">Certificates</a>
-          <a href="#memories">Memories</a>
-          <a href="#about">About</a>
-          <a href="#stack">Stack</a>
-          <a href="https://github.com/AdamAtrons5911" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="#projects" data-i18n="nav.projects">Projects</a>
+          <a href="#certificates" data-i18n="nav.certificates">Certificates</a>
+          <a href="#memories" data-i18n="nav.memories">Memories</a>
+          <a href="#about" data-i18n="nav.story">About</a>
+          <a href="#stack" data-i18n="nav.stack">Stack</a>
+          <a href="https://github.com/AdamAtrons5911" target="_blank" rel="noreferrer" data-i18n="nav.github">GitHub</a>
         </div>
         <div class="footer-bottom">
           <p>© <span id="year"></span> Adam Abdullah. Built with evidence & code.</p>
@@ -1127,6 +1144,7 @@
       </div>
     </footer>
 
+    <script src="i18n.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
