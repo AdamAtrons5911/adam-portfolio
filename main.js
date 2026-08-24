@@ -1,3 +1,11 @@
+// Ensure clean LTR English mode
+document.documentElement.lang = "en";
+document.documentElement.dir = "ltr";
+try {
+  localStorage.removeItem("adam_portfolio_lang");
+  localStorage.removeItem("adam_banner_dismissed");
+} catch (e) {}
+
 // ─── Current Year ───
 document.getElementById("year").textContent = new Date().getFullYear();
 
