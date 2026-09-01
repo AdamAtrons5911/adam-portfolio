@@ -288,6 +288,47 @@ img { display: block; max-width: 100%; }
 }
 .arrow-out { font-size: 0.9rem; }
 
+.lang-switch-wrap {
+  display: inline-flex;
+  align-items: center;
+}
+
+.lang-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.25s var(--spring);
+}
+
+.lang-toggle-btn:hover {
+  border-color: var(--gold);
+  color: #fff;
+  box-shadow: 0 0 14px var(--gold-glow);
+  transform: translateY(-1px);
+}
+
+.lang-opt {
+  transition: color 0.2s;
+}
+
+.lang-opt.active {
+  color: var(--gold);
+  font-weight: 800;
+}
+
+.lang-sep {
+  color: var(--text-dim);
+}
+
 .menu-toggle { display: none; }
 .menu-toggle .bar { display: block; width: 22px; height: 2px; background: #fff; transition: 0.3s; }
 .menu-toggle .bar + .bar { margin-top: 6px; }
@@ -1463,4 +1504,119 @@ img { display: block; max-width: 100%; }
   .cert-featured-card { grid-column: span 1; }
   .memories-grid { grid-template-columns: 1fr; }
   .stack-bento { grid-template-columns: 1fr; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   ─── ARABIC RTL STYLESHEET ───
+   ═══════════════════════════════════════════════════════════ */
+[dir="rtl"] body,
+body.rtl-mode {
+  font-family: var(--font-arabic), "Inter", sans-serif;
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .side-nav-dots {
+  right: auto;
+  left: 24px;
+}
+
+[dir="rtl"] .dot-item::after {
+  right: auto;
+  left: 100%;
+  margin-right: 0;
+  margin-left: 12px;
+}
+
+[dir="rtl"] .logo-tag {
+  border-left: none;
+  border-right: 1px solid var(--border);
+  padding-left: 0;
+  padding-right: 0.65rem;
+}
+
+[dir="rtl"] .nav-link span {
+  margin-right: 0;
+  margin-left: 0.25rem;
+}
+
+[dir="rtl"] .hero-inner {
+  direction: rtl;
+}
+
+[dir="rtl"] .hero-cta-group {
+  direction: rtl;
+}
+
+[dir="rtl"] .hero-metrics {
+  direction: rtl;
+}
+
+[dir="rtl"] .p-card-body {
+  text-align: right;
+}
+
+[dir="rtl"] .p-links-row {
+  direction: rtl;
+}
+
+[dir="rtl"] .cert-body {
+  text-align: right;
+}
+
+[dir="rtl"] .cert-meta {
+  direction: rtl;
+}
+
+[dir="rtl"] .memory-caption {
+  text-align: right;
+  direction: rtl;
+}
+
+[dir="rtl"] .about-flex-layout {
+  direction: rtl;
+}
+
+[dir="rtl"] .about-left {
+  text-align: right;
+}
+
+[dir="rtl"] .about-achievements {
+  direction: rtl;
+}
+
+[dir="rtl"] .pillar-header {
+  direction: rtl;
+}
+
+[dir="rtl"] .pillar-box p {
+  text-align: right;
+}
+
+[dir="rtl"] .stack-bento {
+  direction: rtl;
+}
+
+[dir="rtl"] .stack-card {
+  text-align: right;
+}
+
+[dir="rtl"] .contact-text {
+  text-align: right;
+}
+
+[dir="rtl"] .contact-links-grid {
+  direction: rtl;
+}
+
+[dir="rtl"] .footer-content {
+  direction: rtl;
+}
+
+[dir="rtl"] .footer-left {
+  text-align: right;
+}
+
+[dir="rtl"] .footer-links {
+  direction: rtl;
 }

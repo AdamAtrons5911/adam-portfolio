@@ -46,24 +46,32 @@
             <span class="logo-letter">A</span>
           </div>
           <span class="logo-name">Adam Abdullah</span>
-          <span class="logo-tag">Builder · Developer</span>
+          <span class="logo-tag" data-i18n="header.role">Builder · Developer</span>
         </a>
+
+        <div class="lang-switch-wrap">
+          <button type="button" class="lang-toggle-btn" id="lang-toggle" aria-label="Switch Language / تبديل اللغة">
+            <span class="lang-opt active" data-opt="en">🇬🇧 EN</span>
+            <span class="lang-sep">/</span>
+            <span class="lang-opt" data-opt="ar">🇪🇬 عربي</span>
+          </button>
+        </div>
 
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Toggle navigation">
           <span class="bar"></span><span class="bar"></span>
         </button>
 
         <nav id="nav" class="nav" aria-label="Main Navigation">
-          <a href="#projects" class="nav-link"><span>01.</span> Projects</a>
-          <a href="#certificates" class="nav-link"><span>02.</span> Certificates</a>
-          <a href="#memories" class="nav-link"><span>03.</span> Memories</a>
-          <a href="#about" class="nav-link"><span>04.</span> Story</a>
-          <a href="#stack" class="nav-link"><span>05.</span> Stack</a>
+          <a href="#projects" class="nav-link" data-i18n="nav.projects"><span>01.</span> Projects</a>
+          <a href="#certificates" class="nav-link" data-i18n="nav.certificates"><span>02.</span> Certificates</a>
+          <a href="#memories" class="nav-link" data-i18n="nav.memories"><span>03.</span> Memories</a>
+          <a href="#about" class="nav-link" data-i18n="nav.story"><span>04.</span> Story</a>
+          <a href="#stack" class="nav-link" data-i18n="nav.stack"><span>05.</span> Stack</a>
           <a href="https://github.com/AdamAtrons5911" target="_blank" rel="noreferrer" class="nav-github-btn">
             <svg class="gh-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
               <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
             </svg>
-            GitHub Profile
+            <span data-i18n="nav.github">GitHub Profile</span>
             <span class="arrow-out">↗</span>
           </a>
         </nav>
@@ -652,10 +660,10 @@
           <div class="section-header">
             <div class="section-tag-pill">
               <span class="tag-dot"></span>
-              <span>VERIFIED CREDENTIALS · CERTIFICATIONS</span>
+              <span data-i18n="certs.tag">VERIFIED CREDENTIALS · CERTIFICATIONS</span>
             </div>
-            <h2 class="section-title">Certified Technical Milestones</h2>
-            <p class="section-subtitle">
+            <h2 class="section-title" data-i18n="certs.title">Certified Technical Milestones</h2>
+            <p class="section-subtitle" data-i18n="certs.subtitle">
               Official credentials from the Ministry of Communications, CRA programs, Digitobia, and specialized academies.
             </p>
           </div>
@@ -836,10 +844,10 @@
           <div class="section-header">
             <div class="section-tag-pill">
               <span class="tag-dot"></span>
-              <span>EARLY DAYS · MEMORIES & ORIGINS</span>
+              <span data-i18n="memories.tag">EARLY DAYS · MEMORIES & ORIGINS</span>
             </div>
-            <h2 class="section-title">Memories from the Journey</h2>
-            <p class="section-subtitle">
+            <h2 class="section-title" data-i18n="memories.title">Memories from the Journey</h2>
+            <p class="section-subtitle" data-i18n="memories.subtitle">
               Moments that shaped my growth — from attending my very first Google tech summit, to teaching my little sister coding at age 11, to competing across national stages.
             </p>
           </div>
@@ -965,39 +973,39 @@
             <div class="about-left">
               <div class="section-tag-pill">
                 <span class="tag-dot"></span>
-                <span>BIOGRAPHY & LEADERSHIP · IMPACT</span>
+                <span data-i18n="story.tag">BIOGRAPHY & LEADERSHIP · IMPACT</span>
               </div>
-              <h2 class="about-heading">
+              <h2 class="about-heading" data-i18n="story.title">
                 Building systems.<br />
                 Leading teams.<br />
                 <span class="gradient-text">Never stopping.</span>
               </h2>
-              <p class="about-p">
+              <p class="about-p" data-i18n="story.p1">
                 I'm <strong>Adam Abdullah</strong> from Aswan, Egypt. I got into technology early and never looked back. Whether it's training an autoencoder on IoT telemetry, architecting an operating system interface, or leading youth camps, I thrive on turning ideas into reality.
               </p>
-              <p class="about-p">
+              <p class="about-p" data-i18n="story.p2">
                 In Summer 2024, I served as the <strong>President of the "Dawwie" Summer Camp</strong>, leading, organizing, and mentoring over <strong>400+ students</strong> across diverse technical and cultural teams.
               </p>
               <div class="about-achievements">
                 <div class="achieve-item">
                   <span class="achieve-icon">🏆</span>
                   <div>
-                    <strong>3x ISEF Science & Engineering Fair</strong>
-                    <small>Biomedical & IoT thermal protection for vaccines</small>
+                    <strong data-i18n="story.achieve1">3x ISEF Science & Engineering Fair</strong>
+                    <small data-i18n="story.achieve1Sub">Biomedical & IoT thermal protection for vaccines</small>
                   </div>
                 </div>
                 <div class="achieve-item">
                   <span class="achieve-icon">📖</span>
                   <div>
-                    <strong>National Reading Project Finalist</strong>
-                    <small>Represented Aswan at the New Administrative Capital</small>
+                    <strong data-i18n="story.achieve2">National Reading Project Finalist</strong>
+                    <small data-i18n="story.achieve2Sub">Represented Aswan at the New Administrative Capital</small>
                   </div>
                 </div>
                 <div class="achieve-item">
                   <span class="achieve-icon">🎓</span>
                   <div>
-                    <strong>Digital Egypt Cubs Initiative (DECI)</strong>
-                    <small>Graduated top honors in software & digital innovation</small>
+                    <strong data-i18n="story.achieve3">Digital Egypt Cubs Initiative (DECI)</strong>
+                    <small data-i18n="story.achieve3Sub">Graduated top honors in software & digital innovation</small>
                   </div>
                 </div>
               </div>
@@ -1005,34 +1013,34 @@
 
             <div class="about-right">
               <div class="pillars-card">
-                <h3>Core Engineering Focus</h3>
+                <h3 data-i18n="story.pillarsTitle">Core Engineering Focus</h3>
                 <div class="pillar-box" style="--accent: var(--blue)">
                   <div class="pillar-header">
                     <span class="pillar-num">01</span>
-                    <h4>Full-Stack & Web Architecture</h4>
+                    <h4 data-i18n="story.pillar1Title">Full-Stack & Web Architecture</h4>
                   </div>
-                  <p>React, TypeScript, Express, PostgreSQL, Vanilla JS modular design, Playwright regression testing.</p>
+                  <p data-i18n="story.pillar1Desc">React, TypeScript, Express, PostgreSQL, Vanilla JS modular design, Playwright regression testing.</p>
                 </div>
                 <div class="pillar-box" style="--accent: var(--green)">
                   <div class="pillar-header">
                     <span class="pillar-num">02</span>
-                    <h4>Data Science & Pipelines</h4>
+                    <h4 data-i18n="story.pillar2Title">Data Science & Pipelines</h4>
                   </div>
-                  <p>Exploratory analytics, automated web scraping (BS4), relational SQLite workflows, Pandas, Seaborn.</p>
+                  <p data-i18n="story.pillar2Desc">Exploratory analytics, automated web scraping (BS4), relational SQLite workflows, Pandas, Seaborn.</p>
                 </div>
                 <div class="pillar-box" style="--accent: var(--purple)">
                   <div class="pillar-header">
                     <span class="pillar-num">03</span>
-                    <h4>AI, IoT & Hardware</h4>
+                    <h4 data-i18n="story.pillar3Title">AI, IoT & Hardware</h4>
                   </div>
-                  <p>TensorFlow autoencoders, anomaly detection, Arduino sensors, C++ embedded firmware.</p>
+                  <p data-i18n="story.pillar3Desc">TensorFlow autoencoders, anomaly detection, Arduino sensors, C++ embedded firmware.</p>
                 </div>
                 <div class="pillar-box" style="--accent: var(--orange)">
                   <div class="pillar-header">
                     <span class="pillar-num">04</span>
-                    <h4>Branding, UI & Gamification</h4>
+                    <h4 data-i18n="story.pillar4Title">Branding, UI & Gamification</h4>
                   </div>
-                  <p>HTML5 Canvas physics, Web Audio API synthesis, commercial branding, promotional collateral.</p>
+                  <p data-i18n="story.pillar4Desc">HTML5 Canvas physics, Web Audio API synthesis, commercial branding, promotional collateral.</p>
                 </div>
               </div>
             </div>
@@ -1046,10 +1054,10 @@
           <div class="section-header">
             <div class="section-tag-pill">
               <span class="tag-dot"></span>
-              <span>VERIFIED TOOLKIT</span>
+              <span data-i18n="stack.tag">VERIFIED TOOLKIT</span>
             </div>
-            <h2 class="section-title">Technologies & Stack</h2>
-            <p class="section-subtitle">Only technologies actively utilized in my source code, notebooks, and hardware setups.</p>
+            <h2 class="section-title" data-i18n="stack.title">Technologies & Stack</h2>
+            <p class="section-subtitle" data-i18n="stack.subtitle">Only technologies actively utilized in my source code, notebooks, and hardware setups.</p>
           </div>
 
           <div class="stack-bento">
@@ -1092,30 +1100,30 @@
             <div class="contact-text">
               <div class="hero-status-pill">
                 <span class="live-pulse"></span>
-                <span>LET'S COLLABORATE</span>
+                <span data-i18n="contact.pill">LET'S COLLABORATE</span>
               </div>
-              <h2>Have an idea or want to build something impactful?</h2>
-              <p>I'm always open to discussing new projects, research ideas, or engineering opportunities.</p>
+              <h2 data-i18n="contact.title">Have an idea or want to build something impactful?</h2>
+              <p data-i18n="contact.desc">I'm always open to discussing new projects, research ideas, or engineering opportunities.</p>
               <div class="contact-links-grid">
                 <a href="mailto:adamabdala630@gmail.com" class="c-link">
                   <span class="c-icon">📧</span>
                   <div>
-                    <small>Email</small>
+                    <small data-i18n="contact.emailLabel">Email</small>
                     <strong>adamabdala630@gmail.com</strong>
                   </div>
                 </a>
                 <a href="https://github.com/AdamAtrons5911" target="_blank" rel="noreferrer" class="c-link">
                   <span class="c-icon">📁</span>
                   <div>
-                    <small>GitHub</small>
+                    <small data-i18n="contact.ghLabel">GitHub</small>
                     <strong>@AdamAtrons5911</strong>
                   </div>
                 </a>
                 <div class="c-link">
                   <span class="c-icon">📍</span>
                   <div>
-                    <small>Location</small>
-                    <strong>Aswan, Egypt</strong>
+                    <small data-i18n="contact.locLabel">Location</small>
+                    <strong data-i18n="contact.locVal">Aswan, Egypt</strong>
                   </div>
                 </div>
               </div>
@@ -1140,7 +1148,7 @@
             <span class="logo-name">Adam Abdullah</span>
             <span class="logo-tag" data-i18n="header.role">Builder · Developer</span>
           </a>
-          <p class="footer-tagline">Curious builder crafting working systems across software, data, AI, and hardware.</p>
+          <p class="footer-tagline" data-i18n="footer.tagline">Curious builder crafting working systems across software, data, AI, and hardware.</p>
         </div>
         <div class="footer-links">
           <a href="#projects" data-i18n="nav.projects">Projects</a>
@@ -1151,7 +1159,7 @@
           <a href="https://github.com/AdamAtrons5911" target="_blank" rel="noreferrer" data-i18n="nav.github">GitHub</a>
         </div>
         <div class="footer-bottom">
-          <p>© <span id="year"></span> Adam Abdullah. Built with evidence & code.</p>
+          <p data-i18n="footer.copy">© <span id="year"></span> Adam Abdullah. Built with evidence & code.</p>
         </div>
       </div>
     </footer>
