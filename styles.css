@@ -30,7 +30,7 @@
 
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
   --font-display: "Space Grotesk", "Inter", sans-serif;
-  --font-arabic: "Cairo", "Inter", sans-serif;
+  --font-arabic: "Alexandria", "IBM Plex Sans Arabic", system-ui, sans-serif;
   --font-mono: "Fira Code", monospace;
 
   --max-w: 1240px;
@@ -1511,9 +1511,28 @@ img { display: block; max-width: 100%; }
    ═══════════════════════════════════════════════════════════ */
 [dir="rtl"] body,
 body.rtl-mode {
-  font-family: var(--font-arabic), "Inter", sans-serif;
+  font-family: var(--font-arabic), system-ui, sans-serif;
   direction: rtl;
   text-align: right;
+  letter-spacing: 0;
+}
+
+[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4,
+[dir="rtl"] .hero-title, [dir="rtl"] .section-title, [dir="rtl"] .about-heading {
+  font-family: "Alexandria", system-ui, sans-serif;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+}
+
+[dir="rtl"] p, [dir="rtl"] .hero-desc, [dir="rtl"] .about-p, [dir="rtl"] .p-desc {
+  font-family: "IBM Plex Sans Arabic", "Alexandria", system-ui, sans-serif;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+[dir="rtl"] .btn, [dir="rtl"] .filter-tab, [dir="rtl"] .nav-link, [dir="rtl"] .nav-github-btn {
+  font-family: "Alexandria", system-ui, sans-serif;
 }
 
 [dir="rtl"] .side-nav-dots {
